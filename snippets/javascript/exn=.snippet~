@@ -1,0 +1,1 @@
+expect(${1:target}).to_not(equal, ${2:value});
