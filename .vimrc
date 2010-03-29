@@ -1,6 +1,7 @@
 filetype on  " Automatically detect file types.
 filetype plugin on
 filetype indent on
+set ofu=syntaxcomplete#Complete
 
 set nocompatible  " We don't want vi compatibility.
 set list!
@@ -13,6 +14,19 @@ set lines=63
 set columns=236
 winpos 1280 0
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast editing of the .vimrc
+map <leader>e :e! ~/.vim_runtime/vimrc<cr>
+
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 
 " Minibuffer Explorer Settings
 let g:miniBufExplMapWindowNavVim = 1
@@ -38,6 +52,8 @@ nmap <silent> <Leader>p :NERDTreeToggle<CR>
   nmap <leader>qcd       <Plug>SQLU_GetColumnDef<CR>
   nmap <leader>qcdt      <Plug>SQLU_GetColumnDataType<CR>
   nmap <leader>qcp       <Plug>SQLU_CreateProcedure<CR>
+
+nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'

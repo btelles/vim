@@ -1,0 +1,13 @@
+describe "named route ${1:named_route}_path" do
+  it "maps /$1${2:url_variables}" do
+    route_for(:controller => '${3:controller}', :action => '$1'${4:hash_of_url_params}).should == '/$1$2'
+  end
+
+  it "generates params for #$1" do
+    params_from(:get, '/$1$2').should == {:controller => '$3', :action => '$1'$4}
+  end
+
+  it 'recognizes $1_path' do
+    $1_path(${5:method_params}).should == '/$1$2'
+  end
+end
