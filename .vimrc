@@ -69,7 +69,7 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme vividchalk  " Uncomment this to set a default theme
+"colorscheme vividchalk  " Uncomment this to set a default theme
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
@@ -89,7 +89,8 @@ set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set list
 " Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+"set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -98,6 +99,7 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
+nnoremap <silent> <buffer> ". g:NERDTreeMapOpenInTab ." :call <Up>
 
 " Dvorak it!
 no d h
