@@ -89,7 +89,8 @@ set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set list
 " Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+"set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -98,6 +99,7 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
+nnoremap <silent> <buffer> ". g:NERDTreeMapOpenInTab ." :call <Up>
 
 " Dvorak it!
 no d h

@@ -1,0 +1,14 @@
+caption always "%-w%{= Yk} %n %t %{-}%+w%<"
+defscrollback 1024
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+
+screen -t spork
+exec spork
+screen -t spec
+screen -t compass
+exec compass --watch
+screen -t serv
+exec ruby script/server --debugger
+screen -t console
