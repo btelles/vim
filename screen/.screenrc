@@ -1,0 +1,6 @@
+caption always "%-w%{= Yk} %n %t %{-}%+w%<"
+defscrollback 1024
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+
