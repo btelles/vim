@@ -5,7 +5,7 @@ map <Leader>v  :call g:RubyDebugger.open_variables()<CR>
 map <Leader>m  :call g:RubyDebugger.open_breakpoints()<CR>
 map <Leader>t  :call g:RubyDebugger.open_frames()<CR>
 map <Leader>s  :call g:RubyDebugger.step()<CR>
-map <Leader>f  :call g:RubyDebugger.finish()<CR>
+"map <Leader>f  :call g:RubyDebugger.finish()<CR>
 map <Leader>n  :call g:RubyDebugger.next()<CR>
 map <Leader>c  :call g:RubyDebugger.continue()<CR>
 map <Leader>e  :call g:RubyDebugger.exit()<CR>

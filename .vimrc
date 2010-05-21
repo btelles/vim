@@ -14,16 +14,28 @@ set lines=63
 set columns=236
 winpos 1280 0
 
+"Ruby code completion
+set ofu=syntaxcomplete#Complete
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
+
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
 
+"Simple Fold
+    map <unique> <silent> <Leader>f <Plug>SimpleFold_Foldsearch
+
+"Syntastic
+let g:syntastic_enable_signs=1
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc
-map <leader>e :e! ~/.vim_runtime/vimrc<cr>
+map <leader>e :e! ~/.vimrc<cr>
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
@@ -33,6 +45,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+
 
 " alt+n or alt+p to navigate between entries in QuickFix
 map <silent> <m-p> :cp <cr>
@@ -83,6 +96,10 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
  
 " Visual
 set showmatch  " Show matching brackets.
