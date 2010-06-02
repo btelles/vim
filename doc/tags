@@ -98,6 +98,7 @@
 :TlistUnlock	taglist.txt	/*:TlistUnlock*
 :TlistUpdate	taglist.txt	/*:TlistUpdate*
 AND	dbext.txt	/*AND*
+ConqueTerm	conque_term.txt	/*ConqueTerm*
 DBI	dbext.txt	/*DBI*
 ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
@@ -182,6 +183,13 @@ b:match_wholeBR	matchit.txt	/*b:match_wholeBR*
 b:match_word	matchit.txt	/*b:match_word*
 b:match_words	matchit.txt	/*b:match_words*
 config/rails.vim	rails.txt	/*config\/rails.vim*
+conque_term-bugs	conque_term.txt	/*conque_term-bugs*
+conque_term-changelog	conque_term.txt	/*conque_term-changelog*
+conque_term-contribute	conque_term.txt	/*conque_term-contribute*
+conque_term-requirements	conque_term.txt	/*conque_term-requirements*
+conque_term-settings	conque_term.txt	/*conque_term-settings*
+conque_term-todo	conque_term.txt	/*conque_term-todo*
+conque_term-usage	conque_term.txt	/*conque_term-usage*
 cs	surround.txt	/*cs*
 database-extension	dbext.txt	/*database-extension*
 db2	dbext.txt	/*db2*
@@ -717,10 +725,12 @@ textile-commands	textile.txt	/*textile-commands*
 textile-credits	textile.txt	/*textile-credits*
 textile-requirements	textile.txt	/*textile-requirements*
 textile.txt	textile.txt	/*textile.txt*
+vS	surround.txt	/*vS*
 v_[%	matchit.txt	/*v_[%*
 v_]%	matchit.txt	/*v_]%*
 v_a%	matchit.txt	/*v_a%*
 v_g%	matchit.txt	/*v_g%*
+vgS	surround.txt	/*vgS*
 vs	surround.txt	/*vs*
 yS	surround.txt	/*yS*
 ySS	surround.txt	/*ySS*
