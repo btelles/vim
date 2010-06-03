@@ -6,6 +6,14 @@ set ofu=syntaxcomplete#Complete
 set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
+
+"delimitMate options
+let b:delimitMate_quotes = "\" ' ` *"
+let b:delimitMate_expand_cr = "\<CR>\<CR>\<Up>"
+let delimitMate_expand_space = "\<Space>\<Space>\<Left>"
+
+
+
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
  
