@@ -22,6 +22,9 @@ set lines=63
 set columns=236
 winpos 1280 0
 
+"disable the toolbar
+set guioptions-=T
+
 "Ruby code completion
 set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 1
@@ -113,7 +116,7 @@ set expandtab
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set statusline+=%*\ %t
  
 " Visual
 set showmatch  " Show matching brackets.
