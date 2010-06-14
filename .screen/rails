@@ -1,0 +1,37 @@
+caption always "%-w%{= Yk} %n %t %{-}%+w%<"
+defscrollback 1024
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+
+bindkey -k k1 select 1
+bindkey -k k2 select 2
+bindkey -k k3 select 3
+bindkey -k k4 select 4
+bindkey -k k5 select 5
+bindkey -k k6 select 6
+bindkey -k k7 select 7
+bindkey -k k8 select 8
+bindkey -k k9 select 9
+
+bindkey "^t" eval "copy" "stuff ^b"  # enter copy mode and move up one page
+bindkey -m "^t" stuff ^b             # move up one page
+bindkey -m "t" stuff k
+bindkey -m "T" stuff 8k
+
+bindkey -m "^h" stuff ^j             # move down a page
+bindkey -m "h" stuff j               # move down a line
+bindkey -m "H" stuff 8j
+
+bindkey -m "n" stuff l               # move right a char
+bindkey -m "d" stuff h               # move left a char
+screen -t bash
+screen -t spork
+exec spork
+screen -t spec
+screen -t compass
+exec compass --watch
+screen -t server
+exec tail_rdb
+screen -t console
+
