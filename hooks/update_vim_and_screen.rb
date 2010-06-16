@@ -3,11 +3,12 @@ require 'fileutils'
 puts File.expand_path(__FILE__)
 dir = File.dirname(__FILE__)
 #Copy all screen settings/bindings
-dest_screenrc_path = File.join(dir, '../../')
+dest_screenrc_path = File.join(dir, '../../screen')
+dest_screenrc_path_no_dir = File.join(dir, '../..')
 src_screenrc_path = File.join(dir, '../screen/')
 FileUtils.rm_rf(dest_screenrc_path) if File.exist?(dest_screenrc_path)
 
-if FileUtils.cp_r(src_screenrc_path, dest_screenrc_path)
+if FileUtils.cp_r(src_screenrc_path, dest_screenrc_path_no_dir)
   puts "Copied screen to the home directory successfully."
 else
   puts "Failed to copy screen to the home directory."
