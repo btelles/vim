@@ -1,0 +1,9 @@
+#!/bin/sh
+ruby ./update_vim_and_screen.rb
+#
+# An example hook script that is called after a successful
+# commit is made.
+#
+# To enable this hook, rename this file to "post-commit".
+
+: Nothing
