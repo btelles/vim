@@ -3,8 +3,8 @@ require 'fileutils'
 puts File.expand_path(__FILE__)
 dir = File.dirname(__FILE__)
 #Copy all screen settings/bindings
-dest_screenrc_path = File.join(dir, '../../screen')
-dest_screenrc_path_no_dir = File.join(dir, '../..')
+dest_screenrc_path = File.expand_path(File.join(dir, '../../screen'))
+dest_screenrc_path_no_dir = File.expand_path(File.join(dir, '../..'))
 src_screenrc_path = File.join(dir, '../screen/')
 FileUtils.rm_rf(dest_screenrc_path) if File.exist?(dest_screenrc_path)
 
@@ -20,8 +20,8 @@ end
 settings_files = %w{.vimrc .irbrc .autotest .bashrc}
 
 settings_files.each do |file_name|
-  dest= File.join(dir, "../../#{file_name}")
-  src= File.join(dir, "../#{file_name}")
+  dest= File.expand_path(File.join(dir, "../../#{file_name}"))
+  src= File.expand_path(File.join(dir, "../#{file_name}"))
   FileUtils.rm_f(dest) if File.exist?(dest)
   if FileUtils.cp(src, dest)
     puts "Copied #{file_name} to the home directory successfully."
