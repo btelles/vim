@@ -11,8 +11,8 @@ FileUtils.rm_rf(dest_screenrc_path) if File.exist?(dest_screenrc_path)
 if FileUtils.cp_r(src_screenrc_path, dest_screenrc_path_no_dir)
   puts "Copied screen to the home directory successfully."
 else
-  puts src_screenrc_path
-  puts dest_screenrc_path_no_dir
+  puts "src: "+src_screenrc_path
+  puts "dest: "+dest_screenrc_path_no_dir
   puts "Failed to copy screen to the home directory."
 end
 #
@@ -26,8 +26,8 @@ settings_files.each do |file_name|
   if FileUtils.cp(src, dest)
     puts "Copied #{file_name} to the home directory successfully."
   else
-    puts dest
-    puts src
+    puts "src: "+src
+    puts "dest: "+dest
     puts "Failed to copy #{file_name} to the home directory."
   end
 end
