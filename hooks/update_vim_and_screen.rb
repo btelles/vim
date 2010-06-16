@@ -20,8 +20,8 @@ settings_files = %w{.vimrc .irbrc .autotest .bashrc}
 settings_files.each do |file_name|
   dest= File.join(dir, "../../#{file_name}")
   src= File.join(dir, "../#{file_name}")
-  FileUtils.rm_rf(dest) if File.exist?(dest)
-  if FileUtils.cp_r(src, dest)
+  FileUtils.rm_f(dest) if File.exist?(dest)
+  if FileUtils.cp(src, dest)
     puts "Copied #{file_name} to the home directory successfully."
   else
     puts "Failed to copy #{file_name} to the home directory."
