@@ -8,7 +8,7 @@ dest_screenrc_path_no_dir = File.expand_path(File.join(dir, '../..'))
 src_screenrc_path = File.join(dir, '../screen/')
 FileUtils.rm_rf(dest_screenrc_path) if File.exist?(dest_screenrc_path)
 
-FileUtils.cp_r(src_screenrc_path, dest_screenrc_path_no_dir)
+puts "result is: "+FileUtils.cp_r(src_screenrc_path, dest_screenrc_path_no_dir)
 puts "Copied screen to the home directory successfully."
 #
 ##Copy all settings/bindings
