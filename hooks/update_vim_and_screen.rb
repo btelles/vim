@@ -24,7 +24,7 @@ settings_files.each do |file_name|
   dest= File.expand_path(File.join(dir, "../../#{file_name}"))
   src= File.expand_path(File.join(dir, "../#{file_name}"))
   FileUtils.rm_f(dest) if File.exist?(dest)
-  FileUtils.cp_f(src, dest)
+  FileUtils.cp(src, dest)
   if $?
     puts "Copied #{file_name} to the home directory successfully."
   else
