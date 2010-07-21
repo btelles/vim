@@ -7,10 +7,27 @@ set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
 
+set tags=~/.vimtags
+
 "delimitMate options
 let b:delimitMate_quotes = "\" ' ` *"
 let b:delimitMate_expand_cr = "\<CR>\<CR>\<Up>"
 let delimitMate_expand_space = "\<Space>\<Space>\<Left>"
+
+g:acp_behaviorSnipmateLength
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 
 
