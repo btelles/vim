@@ -14,7 +14,7 @@ let b:delimitMate_quotes = "\" ' ` *"
 let b:delimitMate_expand_cr = "\<CR>\<CR>\<Up>"
 let delimitMate_expand_space = "\<Space>\<Space>\<Left>"
 
-g:acp_behaviorSnipmateLength
+let g:acp_behaviorSnipmateLength = 1
 
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
