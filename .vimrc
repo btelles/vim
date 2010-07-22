@@ -10,11 +10,13 @@ set modifiable
 set tags=~/.vimtags
 
 "delimitMate options
-let b:delimitMate_quotes = "\" ' ` *"
-let b:delimitMate_expand_cr = "\<CR>\<CR>\<Up>"
-let delimitMate_expand_space = "\<Space>\<Space>\<Left>"
+let delimitMate_quotes = "\" ' ` *"
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
 
-g:acp_behaviorSnipmateLength
+inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
+"let g:acp_behaviorSnipmateLength = 1
+
 
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -133,7 +135,7 @@ set expandtab
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*\ %t
+set statusline+=%*\ %t\ %l,%v
  
 " Visual
 set showmatch  " Show matching brackets.
