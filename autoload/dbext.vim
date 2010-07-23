@@ -5069,11 +5069,16 @@ function! s:DB_getLoginScript(filename)
     return sql
 endfunction
 
+function! s:rubyTableName(word)
+  return system("~/.vim/a.rb " . a:word)
+endfunction
+
 function! dbext#DB_describeTable(...)
     if(a:0 > 0)
         let table_name = s:DB_getObjectAndQuote(a:1)
     else
-        let table_name = expand("<cword>")
+        let aoeu = expand("<cword>")
+        let table_name = s:rubyTableName(aoeu)
     endif
     if table_name == ""
         call s:DB_warningMsg( 'dbext:You must supply a table name' )
