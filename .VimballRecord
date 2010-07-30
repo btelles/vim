@@ -1,1 +1,2 @@
 delimitMate.vba: call delete('/home/bernie/.vim/plugin/delimitMate.vim')|call delete('/home/bernie/.vim/autoload/delimitMate.vim')|call delete('/home/bernie/.vim/doc/delimitMate.txt')
+Align.vba: call delete('/home/aaaa/.vim/plugin/AlignPlugin.vim')|call delete('/home/aaaa/.vim/plugin/AlignMapsPlugin.vim')|call delete('/home/aaaa/.vim/plugin/cecutil.vim')|call delete('/home/aaaa/.vim/doc/Align.txt')|call delete('/home/aaaa/.vim/autoload/Align.vim')|call delete('/home/aaaa/.vim/autoload/AlignMaps.vim')
