@@ -127,8 +127,8 @@ set mouse=a  " Mouse in all modes
   noremap <A-d> :DBDescribeTable<CR>
 
 " describe activerecord tables
-  noremap <Ctrl-a>= :Align =<CR>
-  noremap <Ctrl-a>| :Align |<CR>
+  "noremap <Ctrl-a>= :Align =<CR>
+  "noremap <Ctrl-a>| :Align |<CR>
 
 " Simple Fold
   map <unique> <silent> <Leader>f <Plug>SimpleFold_Foldsearch
