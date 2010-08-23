@@ -100,9 +100,9 @@ set autoindent
 set smarttab
 set expandtab
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*\ %t\ %l,%v
+set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
+
+
  
 " Visual
 set showmatch  " Show matching brackets.
