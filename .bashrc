@@ -105,10 +105,6 @@ alias 113z1="ssh webmgr@sun113z1.dms.state.fl.us"
 alias m113z1="sshfs webmgr@sun113z1.dms.state.fl.us:/ /home/aaaa/DMS/sun113z1"
 alias turni="ssh app@turnimanager.com -p 30011"
 
-
-alias ks="ps -eaf|grep 'spork rspec'|grep -v grep|cut -d ' ' -f7|xargs -n 1 kill -KILL $1;" #             kill spork process
-alias rks="ps -eaf|grep 'spork rspec'|grep -v grep|cut -d ' ' -f7|xargs -n 1 kill -KILL $1;spork rspec" # kill then restart spork process
-alias spec11="/usr/lib/ruby/gems/1.8/gems/rspec-1.1.12/bin/spec"
 alias myps="ps -ef | grep $USER"
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
@@ -132,10 +128,7 @@ alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
 
 c () { cd "development/$*";}
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
