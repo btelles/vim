@@ -7,17 +7,18 @@ set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
 
+syntax enable
+
 set tags=~/.vimtags
 
 "delimitMate options
 let delimitMate_quotes = "\" ' ` *"
-let delimitMate_expand_cr = 1
+let delimitMate_expand_cr = 0
 let delimitMate_expand_space = 1
 
-inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
+"inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
 "let g:acp_behaviorSnipmateLength = 1
 
-noremap <A-d> :DBDescribeTable<CR>
 
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -30,8 +31,6 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
-nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
-
 
 
 " Add recently accessed projects menu (project plugin)
@@ -56,17 +55,8 @@ let g:rubycomplete_rails = 1
 let mapleader = ","
 let g:mapleader = ","
 
-"Simple Fold
-    map <unique> <silent> <Leader>f <Plug>SimpleFold_Foldsearch
-
 "Syntastic
 let g:syntastic_enable_signs=1
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
-" Fast editing of the .vimrc
-map <leader>e :e! ~/.vimrc<cr>
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
@@ -83,33 +73,9 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
-
-" alt+n or alt+p to navigate between entries in QuickFix
-map <silent> <m-p> :cp <cr>
-map <silent> <m-n> :cn <cr>
- 
-" fuzzy finder maps
-map <leader>t :FuzzyFinderTextMate<CR>
-"map to fuzzy finder text mate stylez
-nnoremap <c-f> :FuzzyFinderTextMate<CR>
-
-"nerd tree toggle
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
-
-"sql formatter
-  vmap <leader>m        <Plug>SQLU_Formatter<CR>
-  nmap <leader>qcl       <Plug>SQLU_CreateColumnList<CR>
-  nmap <leader>qcd       <Plug>SQLU_GetColumnDef<CR>
-  nmap <leader>qcdt      <Plug>SQLU_GetColumnDataType<CR>
-  nmap <leader>qcp       <Plug>SQLU_CreateProcedure<CR>
-
-nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
-
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
  
-syntax enable
-
 
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
@@ -125,7 +91,7 @@ colorscheme vividchalk  " Uncomment this to set a default theme
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
 set shiftwidth=2  " Tabs under smart indent
-set nocp incsearch
+set nocp ""incsearch
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
@@ -134,9 +100,9 @@ set autoindent
 set smarttab
 set expandtab
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*\ %t\ %l,%v
+set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
+
+
  
 " Visual
 set showmatch  " Show matching brackets.
@@ -153,7 +119,50 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
-nnoremap <silent> <buffer> ". g:NERDTreeMapOpenInTab ." :call <Up>
+
+" strip white spaces
+  nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+" describe activerecord tables
+  noremap <A-d> :DBDescribeTable<CR>
+
+" describe activerecord tables
+  "noremap <Ctrl-a>= :Align =<CR>
+  "noremap <Ctrl-a>| :Align |<CR>
+
+" Simple Fold
+  map <unique> <silent> <Leader>f <Plug>SimpleFold_Foldsearch
+
+" Fast saving
+  nmap <leader>w :w!<cr>
+
+" Fast editing of the .vimrc
+  map <leader>e :e! ~/.vimrc<cr>
+
+" Git maps "
+  map <leader>gs :Gstatus<cr>
+  map <leader>gc :Gcommit -m "
+  map <leader>gw :Gwrite<cr>
+
+" alt+n or alt+p to navigate between entries in QuickFix
+  map <silent> <m-p> :cp <cr>
+  map <silent> <m-n> :cn <cr>
+
+"map to fuzzy finder text mate stylez
+  nnoremap <c-f> :FuzzyFinderTextMate<CR>
+
+"nerd tree toggle
+  nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+"sql formatter
+  vmap <leader>m        <Plug>SQLU_Formatter<CR>
+  nmap <leader>qcl       <Plug>SQLU_CreateColumnList<CR>
+  nmap <leader>qcd       <Plug>SQLU_GetColumnDef<CR>
+  nmap <leader>qcdt      <Plug>SQLU_GetColumnDataType<CR>
+  nmap <leader>qcp       <Plug>SQLU_CreateProcedure<CR>
+
+" Reload Snippets
+  nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
 
 " Dvorak it!
 no d h

@@ -4355,6 +4355,8 @@ function! s:DB_ODBC_describeProcedure(procedure_name)
         let driver = 'SQLSRV'
     elseif rdbms =~? 'mysql'
         let driver = 'mysql'
+    elseif rdbms =~? 'oracle_enhanced'
+        let driver = 'Oracle'
     elseif rdbms =~? 'oracle'
         let driver = 'Oracle'
     elseif rdbms =~? 'db2'
