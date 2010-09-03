@@ -11,6 +11,7 @@
 "   http://bike-nomad.com/vim/ruby.vim.
 " ----------------------------------------------------------------------------
 
+source ~/.vim/ftplugin/ri.vim
 " Only do this when not done yet for this buffer
 if (exists("b:did_ftplugin"))
   finish

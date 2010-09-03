@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+focused=`xdotool getwindowfocus`
+
+x=`xwininfo -id $focused | grep Absolute.*X | cut -d : -f 2 | cut --delimiter=  -f 1`
+y=`xwininfo -id $focused | grep Absolute.*Y | cut -d : -f 2 | cut --delimiter=  -f 1`
+
+echo $x
+echo $y
+
+while getopts ":udlr" Option
+do 
+  case $Option in
+    u    ) y=0 && x=1080;;
+    d    ) y=1080 && x=1280;;
+    l    ) y=1080 && x=0;;
+    r    ) y=1080 && x=3200;;
+  esac
+
+done
+
+xdotool windowmove $focused $x $y
