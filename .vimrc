@@ -17,7 +17,7 @@ let delimitMate_expand_cr = 0
 let delimitMate_expand_space = 1
 
 "inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
-"let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorSnipmateLength = 1
 
 
 function! <SID>StripTrailingWhitespaces()
@@ -184,3 +184,9 @@ no N <C-w><C-w>
 no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
+sunmap n
+sunmap t
+sunmap d
+sunmap N
+sunmap T
+sunmap D
