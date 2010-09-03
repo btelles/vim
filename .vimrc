@@ -184,9 +184,11 @@ no N <C-w><C-w>
 no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
-sunmap n
-sunmap t
 sunmap d
-sunmap N
-sunmap T
+sunmap h
+sunmap t
+sunmap n
 sunmap D
+sunmap H
+sunmap T
+sunmap N
