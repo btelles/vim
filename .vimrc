@@ -100,7 +100,7 @@ set autoindent
 set smarttab
 set expandtab
 
-set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
+set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
 
 
  
@@ -125,6 +125,15 @@ set mouse=a  " Mouse in all modes
 
 " describe activerecord tables
   noremap <A-d> :DBDescribeTable<CR>
+
+" show alternate file
+  noremap <leader>a :A<CR>
+  noremap <leader>rc :Rcontroller 
+  noremap <leader>rm :Rmodel 
+  noremap <leader>rs :Rspec 
+  noremap <leader>rv :Rview 
+  noremap <leader>rh :Rhelper 
+
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
