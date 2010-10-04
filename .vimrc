@@ -171,7 +171,7 @@ set mouse=a  " Mouse in all modes
   nmap <leader>qcp       <Plug>SQLU_CreateProcedure<CR>
 
 " Reload Snippets
-  nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
+  nmap ,rr :call ReloadAllSnippets()<CR>
 
 " Dvorak it!
 no d h

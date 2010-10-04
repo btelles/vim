@@ -5,8 +5,11 @@ alias x=startx
 alias gg='git gui'
 alias gk='gitk --all'
 alias gs='git status'
+alias r='rails'
 alias rss="ruby script/server"
 alias rsc="ruby script/console"
+alias rs="rails server --debugger"
+alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
 alias erd="RAILS_ENV=devolpment&&export RAILS_ENV"
 alias myf="ssh webmgr@myflorida.com"
