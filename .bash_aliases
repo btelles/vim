@@ -11,7 +11,7 @@ alias rsc="ruby script/console"
 alias rs="rails server --debugger"
 alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
-alias erd="RAILS_ENV=devolpment&&export RAILS_ENV"
+alias erd="RAILS_ENV=development&&export RAILS_ENV"
 alias myf="ssh webmgr@myflorida.com"
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
 
@@ -43,6 +43,8 @@ alias gci="git pull --rebase && rake && git push"
 alias rscreen="screen -c ~/.screen/rails"
 alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
+
+alias aptana="open /home/aaaa/Downloads/Aptana\ Studio\ 3/AptanaStudio3"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
