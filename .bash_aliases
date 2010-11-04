@@ -14,7 +14,7 @@ alias erp="RAILS_ENV=production&&export RAILS_ENV"
 alias erd="RAILS_ENV=development&&export RAILS_ENV"
 alias myf="ssh webmgr@myflorida.com"
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
-
+alias chrome='/opt/google/chrome/google-chrome %U'
 # ssh aliases
 alias 115z3="ssh webmgr@sun115z3.dms.state.fl.us"
 alias m115z3="sshfs webmgr@sun115z3.dms.state.fl.us:/ /home/aaaa/DMS/sun115z3"
@@ -25,22 +25,30 @@ alias turni="ssh app@turnimanager.com -p 30011 -X"
 alias myps="ps -ef | grep $USER"
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
-alias gadd="git add -u && git add . && git status"
 alias svnprecommit="git svn rebase && rake features && rake test"
 alias hgprecommit="hg pull && rake features && rake test"
 alias cuc="cucumber -r features"
+
 alias g="git"
-alias tu="ruby_test unit"
-alias tf="ruby_test functional"
-alias su="ruby_tu_rs unit"
-alias sf="ruby_tu_rs functional"
-alias ti="ruby_test integration"
-alias hgdi="hg diff --color=always --git | less -r"
-alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
+alias gadd="git add -u && git add . && git status"
 alias gi="sudo gem install"
 alias giv="sudo gem install -v"
 alias gci="git pull --rebase && rake && git push"
-alias rscreen="screen -c ~/.screen/rails"
+
+#alias tu="ruby_test unit"
+#alias tf="ruby_test functional"
+#alias su="ruby_tu_rs unit"
+#alias sf="ruby_tu_rs functional"
+#alias ti="ruby_test integration"
+
+alias hgdi="hg diff --color=always --git | less -r"
+alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
+
+alias r2="rvm use ree"
+alias r3="rvm use ree && rvm gemset use rails3"
+alias rs2="rvm use ree && screen -c ~/.screen/rails"
+alias rs3="rvm use ree && rvm gemset use rails3 && screen -c ~/.screen/rails"
+
 alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
 

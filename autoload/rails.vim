@@ -4518,6 +4518,8 @@ function! RailsBufInit(path)
     setlocal filetype=liquid
   elseif &ft =~ '^\%(haml\|x\=html\)\=$' && expand("%:e") == "haml"
     setlocal filetype=haml
+  elseif &ft =~ '^\%(scss\|conf\)\=$' && expand("%:e") == "scss"
+    setlocal filetype=sass
   elseif &ft =~ '^\%(sass\|conf\)\=$' && expand("%:e") == "sass"
     setlocal filetype=sass
   elseif &ft =~ '^\%(scss\|conf\)\=$' && expand("%:e") == "scss"
