@@ -17,7 +17,7 @@ let delimitMate_expand_cr = 0
 let delimitMate_expand_space = 1
 
 "inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
-"let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorSnipmateLength = 1
 
 
 function! <SID>StripTrailingWhitespaces()
@@ -100,7 +100,7 @@ set autoindent
 set smarttab
 set expandtab
 
-set statusline+=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
+set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
 
 
  
@@ -125,6 +125,15 @@ set mouse=a  " Mouse in all modes
 
 " describe activerecord tables
   noremap <A-d> :DBDescribeTable<CR>
+
+" show alternate file
+  noremap <leader>a :A<CR>
+  noremap <leader>rc :Rcontroller 
+  noremap <leader>rm :Rmodel 
+  noremap <leader>rs :Rspec 
+  noremap <leader>rv :Rview 
+  noremap <leader>rh :Rhelper 
+
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
@@ -162,7 +171,7 @@ set mouse=a  " Mouse in all modes
   nmap <leader>qcp       <Plug>SQLU_CreateProcedure<CR>
 
 " Reload Snippets
-  nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
+  nmap ,rr :call ReloadAllSnippets()<CR>
 
 " Dvorak it!
 no d h
@@ -184,9 +193,11 @@ no N <C-w><C-w>
 no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
+sunmap d
 sunmap h
 sunmap t
 sunmap n
+sunmap D
 sunmap H
 sunmap T
 sunmap N

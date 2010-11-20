@@ -30,7 +30,7 @@ screen -t spork
 exec spork
 screen -t spec
 screen -t compass
-exec compass --watch
+exec compass watch
 screen -t server
 #exec tail_rdb
 screen -t console
