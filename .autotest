@@ -2,7 +2,7 @@ Autotest.add_hook :initialize do |at|
   unless ARGV.empty?
     at.find_directories = ARGV.length == 1 ? ["spec/#{ARGV.first}","app/#{ARGV.first}"] : ARGV.dup
   end
-  %w{log .git .svn .hg test.sqlite3 debug.log }.each do |exception|
+  %w{log/* test.log .swp .swo .git .svn .hg test.sqlite3 debug.log }.each do |exception|
     at.add_exception(exception)
   end
 end

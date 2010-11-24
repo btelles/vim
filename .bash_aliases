@@ -24,7 +24,7 @@ alias turni="ssh app@turnimanager.com -p 30011 -X"
 
 alias myps="ps -ef | grep $USER"
 alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
+alias remigrate="rake db:migrate:reset db:seed && rake RAILS_ENV=test db:migrate:reset db:seed"
 alias svnprecommit="git svn rebase && rake features && rake test"
 alias hgprecommit="hg pull && rake features && rake test"
 alias cuc="cucumber -r features"

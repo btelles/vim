@@ -90,5 +90,8 @@ fi
 # always use rspec
 export JEWELER_OPTS="--rspec"
 
+# Always use cucumber when autotesting
+export AUTOFEATURE=true
+
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
