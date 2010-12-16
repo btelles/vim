@@ -11,7 +11,7 @@ alias rsc="ruby script/console"
 alias rs="rails server --debugger"
 alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
-alias erd="RAILS_ENV=devolpment&&export RAILS_ENV"
+alias erd="RAILS_ENV=development&&export RAILS_ENV"
 alias myf="ssh webmgr@myflorida.com"
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
 alias chrome='/opt/google/chrome/google-chrome %U'
@@ -24,7 +24,7 @@ alias turni="ssh app@turnimanager.com -p 30011 -X"
 
 alias myps="ps -ef | grep $USER"
 alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
+alias remigrate="rake db:migrate:reset db:seed && rake RAILS_ENV=test db:migrate:reset db:seed"
 alias svnprecommit="git svn rebase && rake features && rake test"
 alias hgprecommit="hg pull && rake features && rake test"
 alias cuc="cucumber -r features"
@@ -49,6 +49,8 @@ alias rscreen="screen -c ~/.screen/rails"
 alias vmount="sudo vmware-mount /media/SSD/Ubuntu/Ubuntu.vmdk /home/bernie/vmware_mounts"
 alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
+
+alias aptana="open /home/aaaa/Downloads/Aptana\ Studio\ 3/AptanaStudio3"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
