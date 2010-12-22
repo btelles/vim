@@ -2,9 +2,7 @@ Autotest.add_hook :initialize do |at|
   unless ARGV.empty?
     at.find_directories = ARGV.length == 1 ? ["spec/#{ARGV.first}","app/#{ARGV.first}"] : ARGV.dup
   end
-  %w{log/* test.log .swp .swo .git .svn .hg test.sqlite3 debug.log }.each do |exception|
-    at.add_exception(exception)
-  end
+  %w{.svn .hg .git fixture_rails_root/db/test.sqlite3 test.log debug.log }.each {|exception|at.add_exception(exception)}
 end
 Autotest.add_hook :reset do |at|
   at.clear_mappings

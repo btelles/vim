@@ -44,11 +44,9 @@ alias gci="git pull --rebase && rake && git push"
 alias hgdi="hg diff --color=always --git | less -r"
 alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
 
-alias r2="rvm use ree"
-alias r3="rvm use ree && rvm gemset use rails3"
-alias rs2="rvm use ree && screen -c ~/.screen/rails"
-alias rs3="rvm use ree && rvm gemset use rails3 && screen -c ~/.screen/rails"
+alias rscreen="screen -c ~/.screen/rails"
 
+alias vmount="sudo vmware-mount /media/SSD/Ubuntu/Ubuntu.vmdk /home/bernie/vmware_mounts"
 alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
 
