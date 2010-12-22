@@ -42,6 +42,10 @@ class Object
     end
     false
   end
+
+  def im
+    self.methods.sort - Object.methods
+  end
   private :puts_ri_documentation_for
 
   def method_missing(meth, *args, &block)
