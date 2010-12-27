@@ -19,6 +19,7 @@ let delimitMate_expand_space = 1
 "inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
 let g:acp_behaviorSnipmateLength = 1
 
+call pathogen#runtime_append_all_bundles()
 
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
