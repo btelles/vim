@@ -38,8 +38,8 @@ endfunction
 set viminfo^=!
  
 "Set default window size
-set lines=63
-set columns=236
+"set lines=63
+"set columns=236
 winpos 1280 0
 
 "disable the toolbar
