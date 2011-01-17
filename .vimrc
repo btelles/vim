@@ -38,8 +38,8 @@ endfunction
 set viminfo^=!
  
 "Set default window size
-set lines=63
-set columns=236
+"set lines=63
+"set columns=236
 winpos 1280 0
 
 "disable the toolbar
@@ -86,7 +86,7 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme vividchalk  " Uncomment this to set a default theme
+"colorscheme vividchalk  " Uncomment this to set a default theme
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
