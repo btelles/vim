@@ -1,0 +1,1088 @@
+Fast Debugger (ruby-debug-ide 0.4.16, ruby-debug-base 0.10.5.jb) listens on 127.0.0.1:39767
+=> Booting WEBrick
+=> Rails 3.0.3 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+=> Debugger enabled
+[2011-01-18 18:06:20] INFO  WEBrick 1.3.1
+[2011-01-18 18:06:20] INFO  ruby 1.8.7 (2010-04-19) [i686-linux]
+[2011-01-18 18:06:25] INFO  WEBrick::HTTPServer#start: pid=10366 port=3000
+
+
+Started GET "/export/cities" for 127.0.0.1 at Tue Jan 18 18:06:32 -0500 2011
+  Processing by ExportController#cities as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"cities", :controller=>"static"}): 
+  Processing by StaticController#cities as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mAgencyCategory Load (0.3ms)[0m  SELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Cities') LIMIT 1
+  [1m[36mAgency Load (0.6ms)[0m  [1mSELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 5)[0m
+Rendered shared/_big_menu.rhtml (0.4ms)
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.4ms)
+Rendered static/cities.rhtml within layouts/standard (12.6ms)
+Completed 200 OK in 72ms (Views: 15.8ms | ActiveRecord: 0.9ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/cities/index.html (0.6ms)
+Rendered admin/_header_row.rhtml (0.4ms)
+Rendered text template within layouts/admin (95.0ms)
+Completed 200 OK in 393ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/export/site" for 127.0.0.1 at Tue Jan 18 18:07:00 -0500 2011
+  [1m[35mSQL (4.2ms)[0m  describe `myfl_roles_users`
+  Processing by ExportController#site as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"export_index"}): 
+  Processing by ExportController#export_index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"index", :controller=>"static"}): 
+  Processing by StaticController#index as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mView Load (7.5ms)[0m  [1mSELECT `myfl_views`.* FROM `myfl_views` WHERE (name = 'Index - Left') LIMIT 1[0m
+  [1m[35mHeadline Load (13.3ms)[0m  SELECT `myfl_headlines`.* FROM `myfl_headlines` ORDER BY id desc LIMIT 10
+  [1m[36mSQL (3.6ms)[0m  [1mdescribe `myfl_egov_categories_egov_items`[0m
+  [1m[35mEgovItem Load (5.8ms)[0m  SELECT `myfl_egov_items`.* FROM `myfl_egov_items` WHERE (description <> null)
+  [1m[36mSQL (2.5ms)[0m  [1mdescribe `myfl_licensee_categories_licensee_items`[0m
+  [1m[35mLicenseeItem Load (5.7ms)[0m  SELECT `myfl_licensee_items`.* FROM `myfl_licensee_items` WHERE (description <> null)
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered static/index/left_column/_banners.rhtml (0.9ms)
+Rendered static/index/left_column/_job_search.rhtml (0.3ms)
+Rendered static/index/left_column/_answers_now.rhtml (0.4ms)
+Rendered static/index/left_column/_state_411.rhtml (0.3ms)
+Rendered static/index/_left_column.rhtml (14.6ms)
+Rendered static/index/center/_featured_egov.rhtml (1.0ms)
+  [1m[36mHotTopic Load (2.0ms)[0m  [1mSELECT `myfl_hot_topics`.* FROM `myfl_hot_topics` WHERE (`myfl_hot_topics`.view_id = 1)[0m
+Rendered static/index/center/_hot_topics.rhtml (8.1ms)
+Rendered static/index/_center_content.rhtml (12.9ms)
+Rendered static/index/right_column/_governor_box.rhtml (0.4ms)
+Rendered static/index/center/_alert.rhtml (0.2ms)
+Rendered static/index/right_column/_headlines.rhtml (6.5ms)
+Rendered static/index/right_column/_advisory.rhtml (0.3ms)
+Rendered static/index/right_column/_find_legislator.rhtml (0.3ms)
+Rendered static/index/right_column/_office_locator.rhtml (0.5ms)
+Rendered static/index/_right_column.rhtml (21.1ms)
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.2ms)
+Rendered static/index.rhtml within layouts/standard (62.0ms)
+Completed 200 OK in 278ms (Views: 63.8ms | ActiveRecord: 44.6ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/index.shtml (2.4ms)
+  [1m[35mView Load (0.4ms)[0m  SELECT `myfl_views`.* FROM `myfl_views`
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mSQL (22.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mView Load (0.4ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mSlot Load (2.9ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (49.6ms)
+Completed 200 OK in 78ms (Views: 46.7ms | ActiveRecord: 28.8ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1.html (2.3ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (7.9ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (7.9ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1_1.html (0.5ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (8.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1_2.html (59.1ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (7.7ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>1}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>1}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 1) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 2)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 14)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 16)[0m
+Rendered static/banner_include.rhtml (7.9ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view1_4.html (0.4ms)
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mView Load (0.5ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1
+  [1m[36mSlot Load (0.5ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)
+Rendered static/banner_include.rhtml (7.8ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 2.5ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)[0m
+Rendered static/banner_include.rhtml (5.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)
+Rendered static/banner_include.rhtml (5.3ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2_1.html (0.5ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)[0m
+Rendered static/banner_include.rhtml (5.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2_2.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)
+Rendered static/banner_include.rhtml (5.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>2}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>2}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 2) ORDER BY position
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 8)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 9)[0m
+Rendered static/banner_include.rhtml (5.8ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view2_4.html (1.2ms)
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mView Load (0.4ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mSlot Load (0.4ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mBanner Load (0.2ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mBanner Load (2.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (10.0ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 4.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (6.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (5.9ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3_1.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (6.2ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3_2.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (6.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>3}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>3}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 3) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 5)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 10)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 13)[0m
+Rendered static/banner_include.rhtml (6.2ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view3_4.html (0.4ms)
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mView Load (0.6ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mSlot Load (0.4ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mBanner Load (0.2ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (6.1ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 2.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (4.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (5.7ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4_1.html (0.5ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (4.9ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4_2.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (72.3ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>4}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>4}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 4) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 6)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 11)[0m
+Rendered static/banner_include.rhtml (4.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view4_4.html (0.4ms)
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mView Load (0.4ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mSlot Load (0.4ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mBanner Load (0.4ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mBanner Load (0.2ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (6.4ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 2.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (4.8ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (4.4ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5_1.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (4.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5_2.html (1.3ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (4.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>5}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>5}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 5) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 5) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 12)[0m
+Rendered static/banner_include.rhtml (4.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view5_4.html (0.4ms)
+Start rendering component ({:action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mView Load (0.4ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mSlot Load (0.4ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mBanner Load (0.3ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (4.4ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.4ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>0}, :action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>0, "id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (3.2ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6_0.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>1}, :action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>1, "id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (3.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6_1.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>2}, :action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>2, "id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (3.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6_2.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>3}, :action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>3, "id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (3.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6_3.html (0.4ms)
+Start rendering component ({:params=>{:file_number=>4}, :action=>"banner_include", :controller=>"static", :id=>6}): 
+  Processing by StaticController#banner_include as HTML
+  Parameters: {"file_number"=>4, "id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_views`.* FROM `myfl_views` WHERE (`myfl_views`.`id` = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_slots`.* FROM `myfl_slots` WHERE (`myfl_slots`.view_id = 6) ORDER BY position[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `myfl_banners`.* FROM `myfl_banners` WHERE (`myfl_banners`.slot_id = 15)[0m
+Rendered static/banner_include.rhtml (5.3ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/constant/banner_views/view6_4.html (0.6ms)
+Rendered admin/_header_row.rhtml (0.6ms)
+Rendered text template within layouts/admin (2.7ms)
+Completed 200 OK in 1126ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"eservices"}): 
+  Processing by ExportController#eservices as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from eservices at /home/aaaa/development/myfloridaadmin/app/controllers/export_controller.rb:86)
+Start rendering component ({:action=>"eservices", :controller=>"static"}): 
+  Processing by StaticController#eservices as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+actioneservicescontrollerstatic
+  [1m[35mEgovItem Load (1.3ms)[0m  SELECT `myfl_egov_items`.* FROM `myfl_egov_items`
+Rendered shared/_big_menu.rhtml (0.5ms)
+Rendered static/eservices/_left_column.rhtml (2.2ms)
+Rendered shared/_header_row.rhtml (0.6ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.2ms)
+Rendered static/eservices.rhtml within layouts/standard (180.5ms)
+Completed 200 OK in 190ms (Views: 184.5ms | ActiveRecord: 1.3ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/eservices/index.html (1.5ms)
+Start rendering component ({:action=>"eservices", :controller=>"static", :id=>"cat"}): 
+  Processing by StaticController#eservices as HTML
+  Parameters: {"id"=>"cat"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+actioneservicesidcatcontrollerstatic
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `myfl_egov_categories_egov_items`[0m
+  [1m[35mEgovCategory Load (0.9ms)[0m  SELECT `myfl_egov_categories`.* FROM `myfl_egov_categories`
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered static/eservices/_left_column.rhtml (1.8ms)
+  [1m[36mEgovItem Load (6.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 1 )[0m
+  [1m[35mEgovItem Load (0.7ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 2 )
+  [1m[36mEgovItem Load (0.3ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 3 )[0m
+  [1m[35mEgovItem Load (0.3ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 4 )
+  [1m[36mEgovItem Load (0.5ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 5 )[0m
+  [1m[35mEgovItem Load (0.3ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 6 )
+  [1m[36mEgovItem Load (0.3ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 7 )[0m
+  [1m[35mEgovItem Load (0.3ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 8 )
+  [1m[36mEgovItem Load (0.3ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 9 )[0m
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/eservices.rhtml within layouts/standard (45.0ms)
+Completed 200 OK in 61ms (Views: 39.7ms | ActiveRecord: 10.7ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/eservices/cat/index.html (1.0ms)
+Start rendering component ({:action=>"eservices", :controller=>"static", :id=>"cat"}): 
+  Processing by StaticController#eservices as HTML
+  Parameters: {"id"=>"cat"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+actioneservicesidcatcontrollerstatic
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_egov_categories`.* FROM `myfl_egov_categories`
+Rendered shared/_big_menu.rhtml (0.5ms)
+Rendered static/eservices/_left_column.rhtml (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 1 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 2 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 3 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 4 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 5 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 6 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 7 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 8 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_egov_items` INNER JOIN `myfl_egov_categories_egov_items` ON `myfl_egov_items`.id = `myfl_egov_categories_egov_items`.egov_item_id WHERE (`myfl_egov_categories_egov_items`.egov_category_id = 9 )[0m
+Rendered shared/_header_row.rhtml (0.5ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/eservices.rhtml within layouts/standard (26.6ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/eservices/category/index.html (1.4ms)
+Rendered admin/_header_row.rhtml (0.5ms)
+Rendered text template within layouts/admin (2.3ms)
+Completed 200 OK in 634ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"licensees"}): 
+  Processing by ExportController#licensees as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"licensee", :controller=>"static"}): 
+  Processing by StaticController#licensee as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mLicenseeItem Load (2.6ms)[0m  SELECT `myfl_licensee_items`.* FROM `myfl_licensee_items`
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered static/eservices/_left_column.rhtml (1.9ms)
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/licensee.rhtml within layouts/standard (156.1ms)
+Completed 200 OK in 169ms (Views: 159.9ms | ActiveRecord: 2.6ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/licensee/index.html (2.7ms)
+Start rendering component ({:action=>"licensee", :controller=>"static", :id=>"cat"}): 
+  Processing by StaticController#licensee as HTML
+  Parameters: {"id"=>"cat"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `myfl_licensee_categories_licensee_items`[0m
+  [1m[35mLicenseeCategory Load (1.3ms)[0m  SELECT `myfl_licensee_categories`.* FROM `myfl_licensee_categories`
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered static/eservices/_left_column.rhtml (1.8ms)
+  [1m[36mLicenseeItem Load (21.4ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 1 )[0m
+  [1m[35mLicenseeItem Load (1.1ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 2 )
+  [1m[36mLicenseeItem Load (0.9ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 3 )[0m
+  [1m[35mLicenseeItem Load (0.7ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 4 )
+  [1m[36mLicenseeItem Load (0.8ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 5 )[0m
+  [1m[35mLicenseeItem Load (0.7ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 6 )
+  [1m[36mLicenseeItem Load (1.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 7 )[0m
+  [1m[35mLicenseeItem Load (0.6ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 8 )
+  [1m[36mLicenseeItem Load (1.2ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 9 )[0m
+  [1m[35mLicenseeItem Load (0.7ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 10 )
+  [1m[36mLicenseeItem Load (0.8ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 11 )[0m
+  [1m[35mLicenseeItem Load (0.7ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 12 )
+  [1m[36mLicenseeItem Load (0.6ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 13 )[0m
+  [1m[35mLicenseeItem Load (0.6ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 14 )
+  [1m[36mLicenseeItem Load (0.5ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 15 )[0m
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.2ms)
+Rendered static/licensee.rhtml within layouts/standard (89.8ms)
+Completed 200 OK in 177ms (Views: 60.3ms | ActiveRecord: 35.0ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/licensee/cat/index.html (2.6ms)
+Start rendering component ({:action=>"licensee", :controller=>"static", :id=>"cat"}): 
+  Processing by StaticController#licensee as HTML
+  Parameters: {"id"=>"cat"}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `myfl_licensee_categories`.* FROM `myfl_licensee_categories`
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered static/eservices/_left_column.rhtml (1.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 1 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 2 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 3 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 4 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 5 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 6 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 7 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 8 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 9 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 10 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 11 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 12 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 13 )[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 14 )
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT * FROM `myfl_licensee_items` INNER JOIN `myfl_licensee_categories_licensee_items` ON `myfl_licensee_items`.id = `myfl_licensee_categories_licensee_items`.licensee_item_id WHERE (`myfl_licensee_categories_licensee_items`.licensee_category_id = 15 )[0m
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/licensee.rhtml within layouts/standard (50.6ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.1ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/licensee/category/index.html (2.6ms)
+Rendered admin/_header_row.rhtml (0.5ms)
+Rendered text template within layouts/admin (2.5ms)
+Completed 200 OK in 1090ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"directory"}): 
+  Processing by ExportController#directory as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"directory", :controller=>"static"}): 
+  Processing by StaticController#directory as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mAgencyCategory Load (0.8ms)[0m  SELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'State of Florida Agencies') LIMIT 1
+  [1m[36mAgencyCategory Load (0.5ms)[0m  [1mSELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Other Governmental Entities and Postsecondary Education') LIMIT 1[0m
+  [1m[35mAgencyCategory Load (0.4ms)[0m  SELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Committees, Commissions and Other Organizations') LIMIT 1
+  [1m[36mAgencyCategory Load (0.3ms)[0m  [1mSELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Water Management Districts') LIMIT 1[0m
+Rendered shared/_big_menu.rhtml (0.3ms)
+  [1m[35mAgency Load (2.4ms)[0m  SELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 1)
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 2)[0m
+  [1m[35mAgency Load (1.4ms)[0m  SELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 2)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 3)[0m
+  [1m[35mAgency Load (1.4ms)[0m  SELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 3)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 4)
+  [1m[36mAgency Load (1.4ms)[0m  [1mSELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 4)[0m
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/directory.rhtml within layouts/standard (57.4ms)
+Completed 200 OK in 105ms (Views: 57.8ms | ActiveRecord: 10.4ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/directory/index.html (1.7ms)
+Rendered admin/_header_row.rhtml (0.7ms)
+Rendered text template within layouts/admin (3.1ms)
+Completed 200 OK in 258ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"agencies"}): 
+  Processing by ExportController#agencies as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mAgency Load (1.4ms)[0m  SELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.`hosted_page` = 1)
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/48/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/46/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/41/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/30/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/37/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/44/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/22/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/36/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/38/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/45/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/29/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/34/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/2/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/3/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/25/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/18/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/28/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/23/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/14/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/4/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/1/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/19/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/20/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/33/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/369/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/27/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/43/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/50/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/24/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/42/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/26/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/35/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/49/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/39/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/21/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/17/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/280/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/40/index.html
+External Links already processed on /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/agency/32/index.html
+Rendered admin/_header_row.rhtml (0.5ms)
+Rendered text template within layouts/admin (2.4ms)
+Completed 200 OK in 358ms (Views: 3.8ms | ActiveRecord: 1.4ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"counties"}): 
+  Processing by ExportController#counties as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"counties", :controller=>"static"}): 
+  Processing by StaticController#counties as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mAgencyCategory Load (0.4ms)[0m  [1mSELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Counties') LIMIT 1[0m
+Rendered shared/_big_menu.rhtml (0.4ms)
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 6)
+  [1m[36mAgency Load (1.6ms)[0m  [1mSELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 6)[0m
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/counties.rhtml within layouts/standard (13.7ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 2.7ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/counties/index.html (0.6ms)
+Rendered admin/_header_row.rhtml (0.6ms)
+Rendered text template within layouts/admin (2.9ms)
+Completed 200 OK in 165ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"cities"}): 
+  Processing by ExportController#cities as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+Start rendering component ({:action=>"cities", :controller=>"static"}): 
+  Processing by StaticController#cities as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mAgencyCategory Load (0.3ms)[0m  SELECT `myfl_agency_categories`.* FROM `myfl_agency_categories` WHERE (name = 'Cities') LIMIT 1
+  [1m[36mAgency Load (0.4ms)[0m  [1mSELECT `myfl_agencies`.* FROM `myfl_agencies` WHERE (`myfl_agencies`.agency_category_id = 5)[0m
+Rendered shared/_big_menu.rhtml (0.6ms)
+Rendered shared/_header_row.rhtml (0.5ms)
+Rendered shared/_search_bar.rhtml (0.4ms)
+Rendered shared/_footer.rhtml (0.5ms)
+Rendered static/cities.rhtml within layouts/standard (15.2ms)
+Completed 200 OK in 37ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/cities/index.html (0.7ms)
+Rendered admin/_header_row.rhtml (0.5ms)
+Rendered text template within layouts/admin (2.3ms)
+Completed 200 OK in 348ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"headlines"}): 
+  Processing by ExportController#headlines as HTML
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mHeadline Load (0.7ms)[0m  SELECT `myfl_headlines`.* FROM `myfl_headlines`
+Start rendering component ({:action=>"showstory", :controller=>"static", :id=>6}): 
+  Processing by StaticController#showstory as HTML
+  Parameters: {"id"=>6}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mHeadline Load (0.4ms)[0m  [1mSELECT `myfl_headlines`.* FROM `myfl_headlines` WHERE (`myfl_headlines`.`id` = 6) LIMIT 1[0m
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.2ms)
+Rendered static/showstory.rhtml within layouts/standard (6.4ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.1ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/showstory/6/index.html (4.9ms)
+Start rendering component ({:action=>"showstory", :controller=>"static", :id=>7}): 
+  Processing by StaticController#showstory as HTML
+  Parameters: {"id"=>7}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mHeadline Load (0.4ms)[0m  SELECT `myfl_headlines`.* FROM `myfl_headlines` WHERE (`myfl_headlines`.`id` = 7) LIMIT 1
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.2ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/showstory.rhtml within layouts/standard (5.9ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/showstory/7/index.html (1.3ms)
+Start rendering component ({:action=>"showstory", :controller=>"static", :id=>8}): 
+  Processing by StaticController#showstory as HTML
+  Parameters: {"id"=>8}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mHeadline Load (0.5ms)[0m  [1mSELECT `myfl_headlines`.* FROM `myfl_headlines` WHERE (`myfl_headlines`.`id` = 8) LIMIT 1[0m
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered shared/_header_row.rhtml (0.3ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.2ms)
+Rendered static/showstory.rhtml within layouts/standard (6.0ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/showstory/8/index.html (4.4ms)
+Start rendering component ({:action=>"showstory", :controller=>"static", :id=>9}): 
+  Processing by StaticController#showstory as HTML
+  Parameters: {"id"=>9}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[35mHeadline Load (0.4ms)[0m  SELECT `myfl_headlines`.* FROM `myfl_headlines` WHERE (`myfl_headlines`.`id` = 9) LIMIT 1
+Rendered shared/_big_menu.rhtml (0.3ms)
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.3ms)
+Rendered static/showstory.rhtml within layouts/standard (6.8ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/showstory/9/index.html (1.6ms)
+Start rendering component ({:action=>"showstory", :controller=>"static", :id=>10}): 
+  Processing by StaticController#showstory as HTML
+  Parameters: {"id"=>10}
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from login_required at ./lib/login_system.rb:45)
+  [1m[36mHeadline Load (0.5ms)[0m  [1mSELECT `myfl_headlines`.* FROM `myfl_headlines` WHERE (`myfl_headlines`.`id` = 10) LIMIT 1[0m
+Rendered shared/_big_menu.rhtml (0.4ms)
+Rendered shared/_header_row.rhtml (0.4ms)
+Rendered shared/_search_bar.rhtml (0.3ms)
+Rendered shared/_footer.rhtml (0.4ms)
+Rendered static/showstory.rhtml within layouts/standard (6.7ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+End of component rendering
+Write page /home/aaaa/development/myfloridaadmin_dev_docs/myfl_fake/releases/fake_release/../../export/showstory/10/index.html (2.6ms)
+Rendered admin/_header_row.rhtml (0.5ms)
+Rendered text template within layouts/admin (2.2ms)
+Completed 200 OK in 88ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+End of component rendering
+Start rendering component ({:action=>"contactus email_addresses\n", :controller=>"static"}): 
+Completed   in 4253ms
+
+AbstractController::ActionNotFound (The action 'contactus email_addresses
+' could not be found for StaticController):
+  /lib/static_path_helpers.rb:60:in `export'
+  app/controllers/export_controller.rb:25:in `site'
+  app/controllers/export_controller.rb:24:in `each'
+  app/controllers/export_controller.rb:24:in `site'
+
+Rendered /home/bernie/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+[2011-01-18 18:07:30] ERROR SignalException: SIGHUP
+	/home/aaaa/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:91:in `select'
+[2011-01-18 18:07:51] ERROR SignalException: SIGTERM
+	/home/aaaa/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:91:in `select'

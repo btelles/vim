@@ -1,8 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/aaaa/development/e911'
-let g:netrw_dirhist_2='/home/aaaa/development/fesn'
-let g:netrw_dirhist_3='/home/bernie/.rvm/gems/ruby-1.9.2-p0/gems/rack-test-0.5.6'
-let g:netrw_dirhist_4='/home/bernie/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0'
-let g:netrw_dirhist_5='/home/bernie/.rvm/gems/ruby-1.9.2-p0@jquery-governance/bundler/gems/rails-896e25e994e2'
-let g:netrw_dirhist_6='/home/bernie/.rvm/gems/ruby-1.9.2-p0@jquery-governance/gems/acts-as-taggable-on-2.0.6'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/aaaa/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/activerecord-3.0.3'
+let g:netrw_dirhist_2='/home/aaaa/.rvm/gems/ree-1.8.7-2010.02@rails3/gems/capistrano-2.5.19'

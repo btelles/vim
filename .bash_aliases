@@ -47,7 +47,7 @@ alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
 alias rscreen="screen -c ~/.screen/rails"
 
 alias vmount="sudo vmware-mount /media/SSD/Ubuntu/Ubuntu.vmdk /home/bernie/vmware_mounts"
-alias deploy_staging="git push origin master && cap staging deploy"
+alias deploy_staging="git push origin develop && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
 
 alias aptana="open /home/aaaa/Downloads/Aptana\ Studio\ 3/AptanaStudio3"

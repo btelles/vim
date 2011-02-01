@@ -1,7 +1,7 @@
-"=============================================================================
-" Copyright (c) 2007-2009 Takeshi NISHIDA
-"
-" GetLatestVimScripts: 1879 1 :AutoInstall: AutoComplPop
+""=============================================================================
+"" Copyright (c) 2007-2009 Takeshi NISHIDA
+
+"" GetLatestVimScripts: 1879 1 :AutoInstall: AutoComplPop
 "=============================================================================
 " LOAD GUARD {{{1
 

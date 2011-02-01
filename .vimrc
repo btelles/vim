@@ -7,8 +7,9 @@ set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
 
-syntax enable
+let g:ruby_debugger_builtin_sender = 0
 
+syntax enable
 set tags=~/.vimtags
 
 "delimitMate options
@@ -16,8 +17,9 @@ let delimitMate_quotes = "\" ' ` *"
 let delimitMate_expand_cr = 0
 let delimitMate_expand_space = 1
 
-"inoremap <expr> <Tab> delimitMate#ShouldJump() ? delimitMate#JumpAny() : "\<Tab>"
 let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorRubyOmniMethodLength = 2
+let g:acp_behaviorRubyOmniSymbolLength = 2
 
 call pathogen#runtime_append_all_bundles()
 
@@ -47,7 +49,7 @@ set guioptions-=T
 
 "Ruby code completion
 set ofu=syntaxcomplete#Complete
-let g:rubycomplete_buffer_loading = 1
+"let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
 

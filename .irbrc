@@ -4,8 +4,8 @@ require 'wirble'
   Wirble.init
   Wirble.colorize
 
-require 'hirb'
-  Hirb.enable
+#require 'hirb'
+#  Hirb.enable
 
 require 'ap'
 
