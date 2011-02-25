@@ -19,3 +19,9 @@
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = https://github.com/astashov/vim-ruby-debugger.git
+[submodule "ruby"]
+	path = ruby
+	url = https://github.com/jamis/fuzzy_file_finder.git
+[submodule "bundle/fuzzyfinder_textmate"]
+	path = bundle/fuzzyfinder_textmate
+	url = https://github.com/sethbc/fuzzyfinder_textmate.git
