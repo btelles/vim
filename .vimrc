@@ -24,7 +24,6 @@ let g:acp_behaviorRubyOmniSymbolLength = 2
 call pathogen#runtime_append_all_bundles()
 
 function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
     let c = col(".")
@@ -122,6 +121,12 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
+" Move lines up and Down
+nmap <C-Up> jjtP
+nmap <C-Down> jjp
+" Move multiple lines
+vmap <C-Up> xtP`[V`]
+vmap <C-Down> xp`[V`]
 
 " strip white spaces
   nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
@@ -143,7 +148,7 @@ set mouse=a  " Mouse in all modes
   "noremap <Ctrl-a>| :Align |<CR>
 
 " Simple Fold
-  map <unique> <silent> <Leader>f <Plug>SimpleFold_Foldsearch
+"map <unique> <silent> <Leader>f <Plug>SimpleFold_Fold
 
 " Fast saving
   nmap <leader>w :w!<cr>
