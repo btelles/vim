@@ -3,14 +3,17 @@ filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
+set hlsearch
+
 set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
 
-let g:ruby_debugger_builtin_sender = 0
-
 syntax enable
 set tags=~/.vimtags
+
+" use external ruby "
+let g:ruby_debugger_builtin_sender = 0
 
 "delimitMate options
 let delimitMate_quotes = "\" ' ` *"
@@ -180,6 +183,9 @@ vmap <C-Down> xp`[V`]
 
 " Reload Snippets
   nmap ,rr :call ReloadAllSnippets()<CR>
+
+" Add debugger stortcut "
+  nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
 
 " Dvorak it!
 no d h
