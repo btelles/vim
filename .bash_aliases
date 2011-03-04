@@ -13,8 +13,13 @@ alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
 alias erd="RAILS_ENV=development&&export RAILS_ENV"
 alias myf="ssh webmgr@myflorida.com"
+
+#Tails
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
+alias rdbt='tail -1000f /home/bernie/.vim/bundle/vim-ruby-debugger/tmp/ruby_debugger_output'
+
 alias chrome='/opt/google/chrome/google-chrome %U'
+
 # ssh aliases
 alias 115z3="ssh webmgr@sun115z3.dms.state.fl.us"
 alias m115z3="sshfs webmgr@sun115z3.dms.state.fl.us:/ /home/aaaa/DMS/sun115z3"
