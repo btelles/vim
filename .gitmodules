@@ -28,3 +28,6 @@
 [submodule "ruby"]
 	path = ruby
 	url = https://github.com/jamis/fuzzy_file_finder.git
+[submodule "bundle/vim-yard"]
+	path = bundle/vim-yard
+	url = git://github.com/postmodern/vim-yard.git
