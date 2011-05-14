@@ -26,12 +26,9 @@ bindkey -m "H" stuff 8j
 bindkey -m "n" stuff l               # move right a char
 bindkey -m "d" stuff h               # move left a char
 screen -t bash
-screen -t spork
-exec spork
 screen -t spec
 screen -t compass
-exec compass watch
+exec compass --watch
 screen -t server
-#exec tail_rdb
 screen -t console
 
