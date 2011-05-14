@@ -1,3 +1,8 @@
+runtime! autoload/pathogen.vim
+if exists('g:loaded_pathogen')
+  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
+endif
+
 filetype on  " Automatically detect file types.
 filetype plugin on
 filetype indent on
@@ -131,6 +136,8 @@ nmap <C-Down> jjp
 vmap <C-Up> xtP`[V`]
 vmap <C-Down> xp`[V`]
 
+nmap <leader>bb <Plug>BlockToggle
+
 " strip white spaces
   nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
@@ -145,6 +152,8 @@ vmap <C-Down> xp`[V`]
   noremap <leader>rv :Rview 
   noremap <leader>rh :Rhelper 
 
+" Gundo toggle
+nnoremap <F5> :GundoToggle<CR>
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
@@ -186,6 +195,7 @@ vmap <C-Down> xp`[V`]
 
 " Add debugger stortcut "
   nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
+  nmap <leader>rds      :RdbStop<CR>
 
 " Dvorak it!
 no d h
