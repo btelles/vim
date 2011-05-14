@@ -185,7 +185,7 @@ vmap <C-Down> xp`[V`]
   nmap ,rr :call ReloadAllSnippets()<CR>
 
 " Add debugger stortcut "
-  nmap <leader>rdb      :RdbStop<CR>:Rdebugger './script/rails server'<CR>
+  nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
 
 " Dvorak it!
 no d h
