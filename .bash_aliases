@@ -40,12 +40,6 @@ alias gi="sudo gem install"
 alias giv="sudo gem install -v"
 alias gci="git pull --rebase && rake && git push"
 
-#alias tu="ruby_test unit"
-#alias tf="ruby_test functional"
-#alias su="ruby_tu_rs unit"
-#alias sf="ruby_tu_rs functional"
-#alias ti="ruby_test integration"
-
 alias hgdi="hg diff --color=always --git | less -r"
 alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
 
@@ -55,8 +49,6 @@ alias vmount="sudo vmware-mount /media/SSD/Ubuntu/Ubuntu.vmdk /home/bernie/vmwar
 alias deploy_develop="git push origin develop && cap develop deploy"
 alias deploy_staging="git push origin master && cap staging deploy"
 alias deploy_production="git push origin master && cap production deploy"
-
-alias aptana="open /home/aaaa/Downloads/Aptana\ Studio\ 3/AptanaStudio3"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

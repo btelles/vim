@@ -14,6 +14,9 @@ bindkey -k k7 select 7
 bindkey -k k8 select 8
 bindkey -k k9 select 9
 
+bindkey "^w" kill
+bindkey "^q" quit
+
 bindkey "^t" eval "copy" "stuff ^b"  # enter copy mode and move up one page
 bindkey -m "^t" stuff ^b             # move up one page
 bindkey -m "t" stuff k
@@ -25,10 +28,9 @@ bindkey -m "H" stuff 8j
 
 bindkey -m "n" stuff l               # move right a char
 bindkey -m "d" stuff h               # move left a char
+
 screen -t bash
 screen -t spec
 screen -t compass
-exec compass --watch
 screen -t server
 screen -t console
-
