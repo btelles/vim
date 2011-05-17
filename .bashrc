@@ -87,6 +87,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+export PATH=$PATH:$HOME/local/node/bin
 # Jeweler library for ruby gem creation
 # always use rspec
 export JEWELER_OPTS="--rspec"

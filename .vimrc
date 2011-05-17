@@ -153,7 +153,7 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rh :Rhelper 
 
 " Gundo toggle
-nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
