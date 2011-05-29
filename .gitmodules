@@ -34,3 +34,6 @@
 [submodule "bundle/vim-yard"]
 	path = bundle/vim-yard
 	url = git://github.com/postmodern/vim-yard.git
+[submodule "bundle/slurper"]
+	path = bundle/slurper
+	url = https://github.com/vim-scripts/slurper.vim.git
