@@ -197,32 +197,31 @@ nmap <leader>bb <Plug>BlockToggle
 " Add debugger stortcut "
   nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
   nmap <leader>rds      :RdbStop<CR>
-
-" Dvorak it!
-no d h
-no h j
-no t k
-no n l
-"no b f
-"no f b
-"no s :
-"no S :
-no j d
-no l n
-no L N
-" Added benefits
-no - $
-no _ ^
-no N <C-w><C-w>
-"no T <C-w><C-r>
-no H 8<Down>
-no T 8<Up>
-no D <C-w><C-r>
-sunmap d
-sunmap h
-sunmap t
-sunmap n
-sunmap D
-sunmap H
-sunmap T
-sunmap N
+"-" Dvorak it!
+"-no d h
+"-no h j
+"-no t k
+"-no n l
+"-"no b f
+"-"no f b
+"-"no s :
+"-"no S :
+"-no j d
+"-no l n
+"-no L N
+"-" Added benefits
+"-no - $
+"-no _ ^
+"-no N <C-w><C-w>
+"-"no T <C-w><C-r>
+"-no H 8<Down>
+"-no T 8<Up>
+"-no D <C-w><C-r>
+"-sunmap d
+"-sunmap h
+"-sunmap t
+"-sunmap n
+"-sunmap D
+"-sunmap H
+"-sunmap T
+"-sunmap N
