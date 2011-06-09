@@ -193,6 +193,7 @@ nmap <leader>bb <Plug>BlockToggle
 " Reload Snippets
   nmap ,rr :call ReloadAllSnippets()<CR>
 
+  nmap <leader>c NERDComToggleComment
 " Add debugger stortcut "
   nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
   nmap <leader>rds      :RdbStop<CR>
