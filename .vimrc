@@ -198,30 +198,40 @@ nmap <leader>bb <Plug>BlockToggle
   nmap <leader>rdb      :Rdebugger './script/rails server'<CR>
   nmap <leader>rds      :RdbStop<CR>
 "-" Dvorak it!
-"-no d h
-"-no h j
-"-no t k
-"-no n l
-"-"no b f
-"-"no f b
-"-"no s :
-"-"no S :
-"-no j d
-"-no l n
-"-no L N
-"-" Added benefits
-"-no - $
-"-no _ ^
-"-no N <C-w><C-w>
-"-"no T <C-w><C-r>
-"-no H 8<Down>
-"-no T 8<Up>
-"-no D <C-w><C-r>
-"-sunmap d
-"-sunmap h
-"-sunmap t
-"-sunmap n
-"-sunmap D
-"-sunmap H
-"-sunmap T
-"-sunmap N
+no K 8<Up>
+no J 8<Down>
+no N <C-w><C-w>
+
+map Y y$
+nnoremap <silent> <C-L> :nohls<CR><C-L>
+
+inoremap ø <C-O>o
+inoremap <M-o> <C-O>o
+" Emacs style mappings
+inoremap <C-A> <C-O>^
+inoremap <C-X><C-@> <C-A>
+cnoremap <C-A> <Home>
+cnoremap <C-X><C-A> <C-A>
+" If at end of a line of spaces, delete back to the previous line.
+" Otherwise, <Left>
+inoremap <silent> <C-B> <C-R>=getline('.')=~'^\s*$'&&col('.')>strlen(getline('.'))?"0\<Lt>C-D>\<Lt>Esc>kJs":"\<Lt>Left>"<CR>
+cnoremap <C-B> <Left>
+" If at end of line, decrease indent, else <Del>
+inoremap <silent> <C-D> <C-R>=col('.')>strlen(getline('.'))?"\<Lt>C-D>":"\<Lt>Del>"<CR>
+cnoremap <C-D> <Del>
+" If at end of line, fix indent, else <Right>
+inoremap <silent> <C-F> <C-R>=col('.')>strlen(getline('.'))?"\<Lt>C-F>":"\<Lt>Right>"<CR>
+inoremap <C-E> <End>
+cnoremap <C-F> <Right>
+
+noremap <F1> <Esc>
+noremap! <F1> <Esc>
+
+nmap \\ <Plug>NERDCommenterInvert
+xmap \\ <Plug>NERDCommenterInvert
+
+" Enable TAB indent and SHIFT-TAB unindent
+vnoremap <silent> <TAB> >gv
+vnoremap <silent> <S-TAB> <gv
+
+
