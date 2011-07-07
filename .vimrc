@@ -17,6 +17,10 @@ set modifiable
 syntax enable
 set tags=~/.vimtags
 
+" Show list of files
+set wildmode=longest,list,full
+set wildmenu
+
 " use external ruby "
 let g:ruby_debugger_builtin_sender = 0
 
