@@ -174,6 +174,7 @@ nmap <leader>bb <Plug>BlockToggle
 
 " Git maps "
   map <leader>gs :Gstatus<cr>
+  map <leader>ge :Ge:<cr>
   map <leader>gc :Gcommit -m "
   map <leader>gw :Gwrite<cr>
 
@@ -203,8 +204,9 @@ nmap <leader>bb <Plug>BlockToggle
   nmap <leader>rds      :RdbStop<CR>
 "-" Dvorak it!
 no K 8<Up>
-no J 8<Down>
+"no J 8<Down>
 no N <C-w><C-w>
+
 
 map Y y$
 nnoremap <silent> <C-L> :nohls<CR><C-L>
