@@ -30,7 +30,8 @@ bindkey -m "n" stuff l               # move right a char
 bindkey -m "d" stuff h               # move left a char
 
 screen -t bash
-screen -t spec
-screen -t compass
 screen -t server
+screen -t spec
 screen -t console
+screen -t bash
+select 1
