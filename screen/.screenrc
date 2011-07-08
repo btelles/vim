@@ -18,14 +18,14 @@ bindkey -k k9 select 9
 bindkey "^w" kill
 bindkey "^q" quit
 
-bindkey "^t" eval "copy" "stuff ^b"  # enter copy mode and move up one page
-bindkey -m "^t" stuff ^b             # move up one page
-bindkey -m "t" stuff k
-bindkey -m "T" stuff 8k
+bindkey "^k" eval "copy" "stuff ^b"  # enter copy mode and move up one page
+bindkey -m "^k" stuff ^b             # move up one page
+bindkey -m "k" stuff k
+bindkey -m "K" stuff 8k
 
-bindkey -m "^h" stuff ^j             # move down a page
-bindkey -m "h" stuff j               # move down a line
-bindkey -m "H" stuff 8j
+bindkey -m "^j" stuff ^j             # move down a page
+bindkey -m "j" stuff j               # move down a line
+bindkey -m "J" stuff 8j
 
 bindkey -m "n" stuff l               # move right a char
 bindkey -m "d" stuff h               # move left a char
