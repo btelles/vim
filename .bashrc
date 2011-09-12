@@ -96,7 +96,11 @@ export JEWELER_OPTS="--rspec"
 # Always use cucumber when autotesting
 export AUTOFEATURE=true
 export PATH=$HOME/local/node/bin:$PATH
+export WF_DBUSERNAME=wildfire
+export WF_DBPASSWORD=wf1
+
 . `brew --prefix`/etc/profile.d/z.sh
+
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 
