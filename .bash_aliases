@@ -8,15 +8,12 @@ alias gs='git status'
 alias gc='git commit'
 alias gap='git add -p'
 alias r='rails'
-alias bi='bundle install'
-alias bir='rm Gemfile.lock && bundle install'
 alias rss="ruby script/server"
 alias rsc="ruby script/console"
 alias rs="rails server --debugger"
 alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
 alias erd="RAILS_ENV=development&&export RAILS_ENV"
-alias myf="ssh webmgr@myflorida.com"
 
 #Tails
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
@@ -25,10 +22,6 @@ alias rdbt='tail -1000f /home/bernie/.vim/bundle/vim-ruby-debugger/tmp/ruby_debu
 alias chrome='/opt/google/chrome/google-chrome %U'
 
 # ssh aliases
-alias 115z3="ssh webmgr@sun115z3.dms.state.fl.us"
-alias m115z3="sshfs webmgr@sun115z3.dms.state.fl.us:/ /home/aaaa/DMS/sun115z3"
-alias 113z1="ssh webmgr@sun113z1.dms.state.fl.us"
-alias m113z1="sshfs webmgr@sun113z1.dms.state.fl.us:/ /home/aaaa/DMS/sun113z1"
 alias turni="ssh app@turnimanager.com -p 30011 -X"
 
 alias myps="ps -ef | grep $USER"
@@ -48,11 +41,16 @@ alias hgdi="hg diff --color=always --git | less -r"
 alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
 
 alias rscreen="screen -c ~/.screen/rails"
+alias wscreen="screen -c ~/.screen/wf"
 
-alias vmount="sudo vmware-mount /media/SSD/Ubuntu/Ubuntu.vmdk /home/bernie/vmware_mounts"
-alias deploy_develop="git push origin develop && cap develop deploy"
-alias deploy_staging="git push origin master && cap staging deploy"
-alias deploy_production="git push origin master && cap production deploy"
+
+alias b="bundle"
+alias be="bundle exec"
+alias bi="bundle install"
+alias br="bundle exec rake"
+alias bir='rm Gemfile.lock && bundle install'
+alias gvim='mvim'
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
