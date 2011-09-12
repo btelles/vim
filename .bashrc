@@ -4,6 +4,7 @@
 
 # Git template
 export GIT_TEMPLATE_DIR=~/.vim/git_template/
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
@@ -95,5 +96,7 @@ export JEWELER_OPTS="--rspec"
 # Always use cucumber when autotesting
 export AUTOFEATURE=true
 export PATH=$HOME/local/node/bin:$PATH
+. `brew --prefix`/etc/profile.d/z.sh
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
+
 
