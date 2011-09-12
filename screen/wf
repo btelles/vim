@@ -1,0 +1,30 @@
+source .screenrc
+
+screen -t bash
+
+chdir $HOME/development/account_management
+screen -t account_mgmt
+stuff "rails s -p 3001"
+
+chdir $HOME/development/warehouse
+screen -t warehouse
+stuff "be rackup -p 4000"
+
+chdir $HOME/development/app_suite
+screen -t app_suite
+stuff "rails s -p 3003"
+
+chdir $HOME/development/dashboard
+screen -t dashboard
+stuff "rails s -p 3000"
+
+chdir $HOME/development/monitor-crawler
+screen -t monitor-crawler
+stuff "be rackup -p 9999"
+
+chdir $HOME/development/warehouse
+screen -t warehouse_redis
+
+chdir $HOME/development/dashboard
+screen -t spec
+stuff "be rspec spec"
