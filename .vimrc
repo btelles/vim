@@ -52,7 +52,7 @@ set viminfo^=!
  
 "Set default window size
 "set lines=63
-"set columns=236
+set columns=1036
 winpos 1280 0
 
 "disable the toolbar
@@ -99,7 +99,7 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-"colorscheme vividchalk  " Uncomment this to set a default theme
+" colorscheme vividchalk  " Uncomment this to set a default theme
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
@@ -177,6 +177,8 @@ nmap <leader>bb <Plug>BlockToggle
   map <leader>ge :Ge:<cr>
   map <leader>gc :Gcommit -m "
   map <leader>gw :Gwrite<cr>
+
+  no -- :TComment<CR>
 
 " alt+n or alt+p to navigate between entries in QuickFix
   map <silent> <m-p> :cp <cr>
