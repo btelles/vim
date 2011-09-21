@@ -87,6 +87,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  . /usr/local/git/contrib/completion/git-completion.bash
+fi
+
 export PATH=$PATH:$HOME/local/node/bin
 # Jeweler library for ruby gem creation
 # always use rspec
