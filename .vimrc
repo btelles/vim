@@ -185,7 +185,8 @@ nmap <leader>bb <Plug>BlockToggle
   map <silent> <m-n> :cn <cr>
 
 "map to fuzzy finder text mate stylez
-  nnoremap <c-f> :FuzzyFinderTextMate<CR>
+  nnoremap <c-f> :CommandT<CR>
+  let g:CommandTMatchWindowAtTop= 1
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
