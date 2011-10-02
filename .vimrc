@@ -133,8 +133,10 @@ set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
 " Copy and Paste to clipboard
-vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
+nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+imap <C-A-v> <Esc><C-A-v>a
+
 
 " Move lines up and Down
 nmap <C-Up> jjtP
@@ -160,7 +162,7 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rh :Rhelper 
 
 " Gundo toggle
-"nnoremap <F5> :GundoToggle<CR>
+nnoremap <F6> :GundoToggle<CR>
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
@@ -193,6 +195,10 @@ nmap <leader>bb <Plug>BlockToggle
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
+  let NERDTreeMouseMode = 3
+
+" unhighlight text
+  nmap <silent> ,/ :nohlsearch<CR>
 
 "sql formatter
   vmap <leader>m        <Plug>SQLU_Formatter<CR>
