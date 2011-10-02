@@ -5,6 +5,7 @@
 # Git template
 export GIT_TEMPLATE_DIR=~/.vim/git_template/
 
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
@@ -12,6 +13,9 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
 export EDITOR=gvim
+
+export TURNIUSERNAME='turni'
+export TURNIPASSWORD='t8rn1'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -51,6 +55,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 color_prompt=yes
+
+c_red='^[[31m'
+c_green='^[[32m'
+c_sgr0='^[[00m'
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -105,6 +113,7 @@ export WF_DBPASSWORD=wf1
 . `brew --prefix`/etc/profile.d/z.sh
 
 export PATH=$HOME/bin:$PATH
+[[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 
