@@ -49,7 +49,6 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias br="bundle exec rake"
 alias bir='rm Gemfile.lock && bundle install'
-alias gvim='mvim'
 
 
 # enable color support of ls and also add handy aliases

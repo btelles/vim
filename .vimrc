@@ -90,7 +90,6 @@ let g:miniBufExplModSelTarget = 1
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
  
-
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
@@ -133,6 +132,12 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
 
+" Copy and Paste to clipboard
+vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
+nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+imap <C-A-v> <Esc><C-A-v>a
+
+
 " Move lines up and Down
 nmap <C-Up> jjtP
 nmap <C-Down> jjp
@@ -157,7 +162,7 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rh :Rhelper 
 
 " Gundo toggle
-"nnoremap <F5> :GundoToggle<CR>
+nnoremap <F6> :GundoToggle<CR>
 
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
@@ -185,10 +190,15 @@ nmap <leader>bb <Plug>BlockToggle
   map <silent> <m-n> :cn <cr>
 
 "map to fuzzy finder text mate stylez
-  nnoremap <c-f> :FuzzyFinderTextMate<CR>
+  nnoremap <c-f> :CommandT<CR>
+  let g:CommandTMatchWindowAtTop= 1
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
+  let NERDTreeMouseMode = 3
+
+" unhighlight text
+  nmap <silent> ,/ :nohlsearch<CR>
 
 "sql formatter
   vmap <leader>m        <Plug>SQLU_Formatter<CR>

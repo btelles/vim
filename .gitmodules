@@ -37,3 +37,9 @@
 [submodule "bundle/slurper"]
 	path = bundle/slurper
 	url = https://github.com/vim-scripts/slurper.vim.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "git-prompt"]
+	path = git-prompt
+	url = https://github.com/lvv/git-prompt
