@@ -104,6 +104,7 @@ export WF_DBPASSWORD=wf1
 
 . `brew --prefix`/etc/profile.d/z.sh
 
+export PATH=$HOME/bin:$PATH
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 
