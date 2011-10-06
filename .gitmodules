@@ -42,4 +42,10 @@
 	url = https://github.com/tpope/vim-rails.git
 [submodule "git-prompt"]
 	path = git-prompt
-	url = https://github.com/lvv/git-prompt
+	url = https://github.com/lvv/git-prompt.git
+[submodule "ack"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/command_t"]
+	path = bundle/command_t
+	url = https://github.com/vim-scripts/Command-T.git

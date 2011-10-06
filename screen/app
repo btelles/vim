@@ -11,7 +11,7 @@ screen -t app_suite
 stuff "rails s -p 3003"
 
 chdir $HOME/development/app_suite
-screen -t app_suite
+screen -t spec
 stuff "be rpsec"
 
 #chdir $HOME/development/warehouse
