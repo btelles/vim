@@ -100,14 +100,12 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
 fi
 
-export PATH=$PATH:$HOME/local/node/bin
 # Jeweler library for ruby gem creation
 # always use rspec
 export JEWELER_OPTS="--rspec"
 
 # Always use cucumber when autotesting
 export AUTOFEATURE=true
-export PATH=$HOME/local/node/bin:$PATH
 export WF_DBUSERNAME=wildfire
 export WF_DBPASSWORD=wf1
 
