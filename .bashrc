@@ -111,7 +111,7 @@ export WF_DBPASSWORD=wf1
 
 . `brew --prefix`/etc/profile.d/z.sh
 
-export PATH=$HOME/bin:$PATH
+export PATH=$PATH:$HOME/bin:$HOME/node_modules/coffee-script/bin
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
