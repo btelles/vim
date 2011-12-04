@@ -31,3 +31,6 @@
 [submodule "git-prompt"]
   path = git-prompt
   url = https://github.com/lvv/git-prompt
+[submodule "bundle/cucumber.vim"]
+	path = bundle/cucumber.vim
+	url = https://github.com/tpope/vim-cucumber.git
