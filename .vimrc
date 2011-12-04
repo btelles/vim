@@ -63,6 +63,8 @@ set ofu=syntaxcomplete#Complete
 "let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
+autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model()
+
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -160,6 +162,7 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rs :Rspec 
   noremap <leader>rv :Rview 
   noremap <leader>rh :Rhelper 
+  noremap <leader>rf :Rfabricator 
 
 " Gundo toggle
 nnoremap <F6> :GundoToggle<CR>
