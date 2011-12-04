@@ -95,7 +95,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/local/node/bin
+export PATH=$PATH:$HOME/node_modules/.bin:$HOME/local/node/bin
 # Jeweler library for ruby gem creation
 # always use rspec
 export JEWELER_OPTS="--rspec"
@@ -104,6 +104,9 @@ export JEWELER_OPTS="--rspec"
 export AUTOFEATURE=true
 export PATH=$HOME/local/node/bin:$PATH
 export PATH=$HOME/bin:$PATH
+
+source $HOME/.nvm/nvm.sh
+
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
