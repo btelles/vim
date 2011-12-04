@@ -46,3 +46,6 @@
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/vim-xolox"]
+	path = bundle/vim-xolox
+	url = https://github.com/zalun/vim-xolox.git
