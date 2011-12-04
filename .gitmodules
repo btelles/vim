@@ -52,3 +52,6 @@
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git@github.com:btelles/snipmate.vim.git
