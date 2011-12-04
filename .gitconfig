@@ -34,3 +34,10 @@
 	ui = true
 [core]
   editor = vim
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 700x550+1+53
+	history-view-vpane-position = 312
+	main-window-view = HistoryView
+	file-view-hpane-position = 388
+	file-view-vpane-position = 982

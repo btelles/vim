@@ -182,6 +182,8 @@ nnoremap <F6> :GundoToggle<CR>
   map <leader>ge :Ge:<cr>
   map <leader>gc :Gcommit -m "
   map <leader>gw :Gwrite<cr>
+  map <leader>dp :diffput<cr>
+  map <leader>dg :diffget<cr>
 
   no -- :TComment<CR>
 
