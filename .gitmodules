@@ -10,18 +10,9 @@
 [submodule "bundle/vim-ruby-refactoring"]
 	path = bundle/vim-ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = https://github.com/astashov/vim-ruby-debugger.git
-[submodule "bundle/fuzzyfinder_textmate"]
-	path = bundle/fuzzyfinder_textmate
-	url = https://github.com/sethbc/fuzzyfinder_textmate.git
-[submodule "bundle/fuzzyfinder_textmate/plugin"]
-	path = bundle/fuzzyfinder_textmate/plugin
-	url = https://github.com/sethbc/fuzzyfinder_textmate.git
 [submodule "ruby"]
 	path = ruby
 	url = https://github.com/jamis/fuzzy_file_finder.git
@@ -31,12 +22,9 @@
 [submodule "bundle/vim-yard"]
 	path = bundle/vim-yard
 	url = git://github.com/postmodern/vim-yard.git
-[submodule "bundle/slurper"]
-	path = bundle/slurper
-	url = https://github.com/vim-scripts/slurper.vim.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule "git-prompt"]
-	path = git-prompt
-	url = https://github.com/lvv/git-prompt
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
