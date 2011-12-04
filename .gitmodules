@@ -49,3 +49,6 @@
 [submodule "bundle/vim-xolox"]
 	path = bundle/vim-xolox
 	url = https://github.com/zalun/vim-xolox.git
+[submodule "bundle/vim-easytags"]
+	path = bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags.git
