@@ -163,6 +163,7 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rv :Rview 
   noremap <leader>rh :Rhelper 
   noremap <leader>rf :Rfabricator 
+  noremap <leader>rj :Rjavascript 
 
 " Gundo toggle
 nnoremap <F6> :GundoToggle<CR>
