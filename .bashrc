@@ -12,7 +12,7 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 export HISTCONTROL=ignoreboth
 
-export EDITOR=gvim
+export EDITOR=mvim
 
 export TURNIUSERNAME='turni'
 export TURNIPASSWORD='t8rn1'
@@ -111,7 +111,8 @@ export WF_DBPASSWORD=wf1
 
 . `brew --prefix`/etc/profile.d/z.sh
 
-export PATH=$PATH:$HOME/bin:$HOME/node_modules/coffee-script/bin
+export PATH=$HOME/bin:$HOME/node_modules/coffee-script/bin:$HOME/node_modules/js2coffee/bin:$PATH
+if [[ -s "/usr/local/sbin" ]]  ; then export PATH=$PATH:/usr/local/sbin; fi
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 

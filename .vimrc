@@ -188,6 +188,8 @@ nnoremap <F6> :GundoToggle<CR>
 " alt+n or alt+p to navigate between entries in QuickFix
   map <silent> <m-p> :cp <cr>
   map <silent> <m-n> :cn <cr>
+  map <silent> <Ctrl-n> :cn <CR>
+  map <silent> <Ctrl-p> :cp <CR>
 
 "map to fuzzy finder text mate stylez
   nnoremap <c-f> :CommandT<CR>

@@ -1,4 +1,5 @@
 require 'rubygems'
+ActiveRecord::Base.logger = ::Logger.new(STDOUT) if defined?(ActiveRecord)
 
 require 'wirble'
   Wirble.init
@@ -98,5 +99,4 @@ RICompletionProc = proc{|input|
 #Readline.basic_word_break_characters= " \t\n\"\\'`><=;|&{("
 Readline.basic_word_break_characters= " \t\n\\><=;|&"
 Readline.completion_proc = RICompletionProc
-
 
