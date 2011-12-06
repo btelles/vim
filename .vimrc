@@ -63,6 +63,8 @@ set ofu=syntaxcomplete#Complete
 "let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
+autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=model()
+
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -160,6 +162,8 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rs :Rspec 
   noremap <leader>rv :Rview 
   noremap <leader>rh :Rhelper 
+  noremap <leader>rf :Rfabricator 
+  noremap <leader>rj :Rjavascript 
 
 " Gundo toggle
 nnoremap <F6> :GundoToggle<CR>
@@ -254,4 +258,16 @@ xmap \\ <Plug>NERDCommenterInvert
 vnoremap <silent> <TAB> >gv
 vnoremap <silent> <S-TAB> <gv
 
+" Add auto tabularize to cucumber stories "
+inoremap <silent> <Bar> <Bar><Esc>:call <SID>align()<CR>a
 
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction

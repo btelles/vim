@@ -10,21 +10,9 @@
 [submodule "bundle/vim-ruby-refactoring"]
 	path = bundle/vim-ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
-[submodule "vim-ruby-debugger"]
-	path = vim-ruby-debugger
-	url = https://github.com/astashov/vim-ruby-debugger.git
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = https://github.com/astashov/vim-ruby-debugger.git
-[submodule "bundle/fuzzyfinder_textmate"]
-	path = bundle/fuzzyfinder_textmate
-	url = https://github.com/sethbc/fuzzyfinder_textmate.git
-[submodule "bundle/fuzzyfinder_textmate/plugin"]
-	path = bundle/fuzzyfinder_textmate/plugin
-	url = https://github.com/sethbc/fuzzyfinder_textmate.git
 [submodule "ruby"]
 	path = ruby
 	url = https://github.com/jamis/fuzzy_file_finder.git
@@ -34,18 +22,42 @@
 [submodule "bundle/vim-yard"]
 	path = bundle/vim-yard
 	url = git://github.com/postmodern/vim-yard.git
-[submodule "bundle/slurper"]
-	path = bundle/slurper
-	url = https://github.com/vim-scripts/slurper.vim.git
-[submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "git-prompt"]
-	path = git-prompt
-	url = https://github.com/lvv/git-prompt.git
 [submodule "ack"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "git-prompt"]
+  path = git-prompt
+  url = https://github.com/lvv/git-prompt
+[submodule "bundle/cucumber.vim"]
+	path = bundle/cucumber.vim
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule "bundle/better-snipmate-snippets"]
+	path = bundle/better-snipmate-snippets
+	url = git://github.com/bartekd/better-snipmate-snippets.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/vim-xolox"]
+	path = bundle/vim-xolox
+	url = https://github.com/zalun/vim-xolox.git
+[submodule "bundle/vim-easytags"]
+	path = bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git@github.com:btelles/snipmate.vim.git
 [submodule "bundle/command_t"]
 	path = bundle/command_t
 	url = https://github.com/vim-scripts/Command-T.git

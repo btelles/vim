@@ -17,6 +17,7 @@ bindkey -k k9 select 9
 
 bindkey "^w" kill
 bindkey "^q" quit
+bindkey "^t" screen
 
 bindkey "^k" eval "copy" "stuff ^b"  # enter copy mode and move up one page
 bindkey -m "^k" stuff ^b             # move up one page
