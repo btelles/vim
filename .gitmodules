@@ -22,15 +22,12 @@
 [submodule "bundle/vim-yard"]
 	path = bundle/vim-yard
 	url = git://github.com/postmodern/vim-yard.git
-[submodule "ack"]
-	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "git-prompt"]
   path = git-prompt
   url = https://github.com/lvv/git-prompt
