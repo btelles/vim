@@ -58,3 +58,6 @@
 [submodule "z_shortcuts"]
 	path = z_shortcuts
 	url = https://github.com/rupa/z.git
+[submodule "bundle/command_t"]
+	path = bundle/command_t
+	url = https://github.com/vim-scripts/Command-T.git
