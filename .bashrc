@@ -105,6 +105,7 @@ export AUTOFEATURE=true
 export PATH=$HOME/local/node/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
+source $HOME/.vim/z_shortcuts/z.sh
 source $HOME/.nvm/nvm.sh
 
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"

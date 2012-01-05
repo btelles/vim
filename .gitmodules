@@ -55,3 +55,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git@github.com:btelles/snipmate.vim.git
+[submodule "z_shortcuts"]
+	path = z_shortcuts
+	url = https://github.com/rupa/z.git
