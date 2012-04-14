@@ -111,3 +111,5 @@ source $HOME/.nvm/nvm.sh
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
