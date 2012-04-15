@@ -14,8 +14,8 @@ export HISTCONTROL=ignoreboth
 
 export EDITOR=gvim
 
-export TURNIUSERNAME='turni'
-export TURNIPASSWORD='t8rn1'
+export WF_DBUSERNAME='root'
+export WF_DBPASSWORD='freuf55-b'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -105,7 +105,7 @@ export AUTOFEATURE=true
 export PATH=$HOME/local/node/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
-source $HOME/.vim/z_shortcuts/z.sh
+#source $HOME/.vim/z_shortcuts/z.sh
 source $HOME/.nvm/nvm.sh
 
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
