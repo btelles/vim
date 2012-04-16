@@ -14,8 +14,8 @@ export HISTCONTROL=ignoreboth
 
 export EDITOR=mvim
 
-export TURNIUSERNAME='turni'
-export TURNIPASSWORD='t8rn1'
+export WF_DBUSERNAME='root'
+export WF_DBPASSWORD='freuf55-b'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -110,6 +110,7 @@ export WF_DBUSERNAME=wildfire
 export WF_DBPASSWORD=wf1
 
 . `brew --prefix`/etc/profile.d/z.sh
+#source $HOME/.vim/z_shortcuts/z.sh
 
 export PATH=$HOME/bin:$HOME/node_modules/coffee-script/bin:$HOME/node_modules/js2coffee/bin:$PATH
 
@@ -120,3 +121,5 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; f
 . ~/.vim/bin/nvm.sh
 
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

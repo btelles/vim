@@ -1,0 +1,9 @@
+version=0.4.10
+prefix=/Users/bernardotelles/.vim/bin/v0.4.12
+libdir=${prefix}/lib
+includedir=${prefix}/include/node
+
+Name: nodejs
+Description: Evented I/O for V8 JavaScript.
+Version: ${version}
+Cflags: -I${includedir}
