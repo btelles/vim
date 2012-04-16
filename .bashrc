@@ -117,4 +117,6 @@ if [[ -s "/usr/local/sbin" ]]  ; then export PATH=$PATH:/usr/local/sbin; fi
 [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
+. ~/.vim/bin/nvm.sh
 
+[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh

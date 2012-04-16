@@ -13,6 +13,7 @@ set hlsearch
 set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
+set noswapfile
 
 syntax enable
 set tags=~/.vimtags
