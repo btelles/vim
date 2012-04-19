@@ -73,3 +73,6 @@
 [submodule "bundle/solarized_all"]
 	path = bundle/solarized_all
 	url = https://github.com/altercation/solarized.git
+[submodule "bundle/gnome-terminal-colors-solarized"]
+	path = bundle/gnome-terminal-colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
