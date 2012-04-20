@@ -4,7 +4,6 @@
 .bash_profile
 .bashrc
 .directory
-.git
 .gitconfig
 .gitignore
 .gitmodules
