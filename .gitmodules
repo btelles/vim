@@ -12,7 +12,7 @@
 	url = https://github.com/ecomba/vim-ruby-refactoring.git
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
-	url = https://github.com/astashov/vim-ruby-debugger.git
+	url = https://github.com/btelles/vim-ruby-debugger.git
 [submodule "ruby"]
 	path = ruby
 	url = https://github.com/jamis/fuzzy_file_finder.git
@@ -76,3 +76,6 @@
 [submodule "bundle/gnome-terminal-colors-solarized"]
 	path = bundle/gnome-terminal-colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/tsaleh/vim-align.git

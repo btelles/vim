@@ -23,6 +23,7 @@ set wildmenu
 
 " use external ruby "
 let g:ruby_debugger_builtin_sender = 0
+let g:ruby_debugger_no_maps = 1
 
 "delimitMate options
 let delimitMate_quotes = "\" ' ` *"
