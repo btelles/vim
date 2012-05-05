@@ -79,3 +79,6 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
+[submodule "colors/tomorrow-theme"]
+	path = colors/tomorrow-theme
+	url = https://github.com/btelles/tomorrow-theme.git
