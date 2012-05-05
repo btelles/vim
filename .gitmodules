@@ -76,3 +76,6 @@
 [submodule "bundle/gnome-terminal-colors-solarized"]
 	path = bundle/gnome-terminal-colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "colors/tomorrow-theme"]
+	path = colors/tomorrow-theme
+	url = https://github.com/btelles/tomorrow-theme.git
