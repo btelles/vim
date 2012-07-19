@@ -104,6 +104,7 @@ set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk
 colorscheme twilight257
+set guifont=DejaVu\ Sans\ Mono\ Bold:h12
 
 
  
