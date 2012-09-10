@@ -15,7 +15,6 @@ export HISTCONTROL=ignoreboth
 export EDITOR=gvim
 
 export WF_DBUSERNAME='root'
-export WF_DBPASSWORD='freuf55-b'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -108,8 +107,19 @@ export PATH=$HOME/bin:$PATH
 #source $HOME/.vim/z_shortcuts/z.sh
 source $HOME/.nvm/nvm.sh
 
-[[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
+# [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
+# if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
+
+if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
+  RBENV_ROOT=$HOME/.rbenv
+elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
+  RBENV_ROOT=/usr/local/rbenv
+fi
+export RBENV_ROOT
+export PATH="${RBENV_ROOT}/bin:${PATH}"
+if [[ -n "${RBENV_ROOT}" ]]; then
+  eval "$($RBENV_ROOT/bin/rbenv init -)"
+fi
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
