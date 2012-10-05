@@ -125,3 +125,4 @@ fi
 export PATH=$PATH:$HOME/node_modules/.bin:$HOME/local/node/bin
 export EDITOR=gvim
 source $HOME/.nvm/nvm.sh
+source $HOME/.vim/git-prompt/git-prompt.sh
