@@ -2,27 +2,27 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Git template
-export GIT_TEMPLATE_DIR=~/.vim/git_template/
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-# ... or force ignoredups and ignorespace
-export HISTCONTROL=ignoreboth
-
-export EDITOR=gvim
-
-export WF_DBUSERNAME='root'
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -53,14 +53,8 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-color_prompt=yes
-
-c_red='^[[31m'
-c_green='^[[32m'
-c_sgr0='^[[00m'
-
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -75,6 +69,27 @@ xterm*|rxvt*)
     ;;
 esac
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -84,42 +99,29 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-c () { cd "development/$*";}
-
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/node_modules/.bin:$HOME/local/node/bin
-# Jeweler library for ruby gem creation
-# always use rspec
-export JEWELER_OPTS="--rspec"
-
-# Always use cucumber when autotesting
-export AUTOFEATURE=true
-export PATH=$HOME/local/node/bin:$PATH
-export PATH=$HOME/bin:$PATH
-
-#source $HOME/.vim/z_shortcuts/z.sh
-source $HOME/.nvm/nvm.sh
-
-# [[ $- == *i* ]]   &&   source "$HOME/.vim/git-prompt/git-prompt.sh"
-# if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
-  RBENV_ROOT=$HOME/.rbenv
+	RBENV_ROOT=$HOME/.rbenv
 elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
-  RBENV_ROOT=/usr/local/rbenv
+	RBENV_ROOT=/usr/local/rbenv
 fi
+
 export RBENV_ROOT
 export PATH="${RBENV_ROOT}/bin:${PATH}"
+
 if [[ -n "${RBENV_ROOT}" ]]; then
-  eval "$($RBENV_ROOT/bin/rbenv init -)"
+	eval "$($RBENV_ROOT/bin/rbenv init -)"
 fi
 
+########### Bernie Customized
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/node_modules/.bin:$HOME/local/node/bin
+export EDITOR=gvim
+source $HOME/.nvm/nvm.sh
