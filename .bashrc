@@ -107,21 +107,21 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
-	RBENV_ROOT=$HOME/.rbenv
-elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
-	RBENV_ROOT=/usr/local/rbenv
-fi
-
-export RBENV_ROOT
-export PATH="${RBENV_ROOT}/bin:${PATH}"
-
-if [[ -n "${RBENV_ROOT}" ]]; then
-	eval "$($RBENV_ROOT/bin/rbenv init -)"
-fi
+# if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
+# 	RBENV_ROOT=$HOME/.rbenv
+# elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
+# 	RBENV_ROOT=/usr/local/rbenv
+# fi
+# 
+# export RBENV_ROOT
+# export PATH="${RBENV_ROOT}/bin:${PATH}"
+# 
+# if [[ -n "${RBENV_ROOT}" ]]; then
+# 	eval "$($RBENV_ROOT/bin/rbenv init -)"
+# fi
 
 ########### Bernie Customized
-
+source ~/.rvm/scripts/rvm
 export PATH=$PATH:$HOME/node_modules/.bin:$HOME/local/node/bin
 export EDITOR=gvim
 source $HOME/.nvm/nvm.sh
