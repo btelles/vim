@@ -1,7 +1,5 @@
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
-endif
+call pathogen#infect()
+
 
 filetype on  " Automatically detect file types.
 filetype plugin on
@@ -34,8 +32,6 @@ let delimitMate_expand_space = 1
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
-
-call pathogen#runtime_append_all_bundles()
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/

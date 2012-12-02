@@ -82,3 +82,9 @@
 [submodule "colors/tomorrow-theme"]
 	path = colors/tomorrow-theme
 	url = https://github.com/btelles/tomorrow-theme.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = http://github.com/sukima/xmledit
