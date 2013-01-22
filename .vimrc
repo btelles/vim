@@ -1,13 +1,12 @@
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
-endif
+call pathogen#infect()
+
 
 filetype on  " Automatically detect file types.
 filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
+set foldmethod=indent
 set hlsearch
 
 set nocompatible  " We don't want vi compatibility.
@@ -33,8 +32,6 @@ let delimitMate_expand_space = 1
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
-
-call pathogen#runtime_append_all_bundles()
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
@@ -101,7 +98,8 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-" colorscheme twilight
+" colorscheme vividchalk
+" colorscheme twilight257
 set guifont=DejaVu\ Sans\ Mono\ Bold\ 11
  
 " Formatting (some of these are for coding in C and C++)

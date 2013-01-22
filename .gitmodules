@@ -61,8 +61,8 @@
 [submodule "bundle/command_t"]
 	path = bundle/command_t
 	url = https://github.com/vim-scripts/Command-T.git
-[submodule "bundle/vim-handlebars"]
-	path = bundle/vim-handlebars
+[submodule "bundle/handlebars"]
+	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/nvm"]
 	path = bundle/nvm
@@ -82,3 +82,9 @@
 [submodule "colors/tomorrow-theme"]
 	path = colors/tomorrow-theme
 	url = https://github.com/btelles/tomorrow-theme.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = http://github.com/sukima/xmledit

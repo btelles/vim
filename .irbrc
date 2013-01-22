@@ -14,6 +14,8 @@ require 'ap'
 
 require 'interactive_editor' 
 
+require 'what_methods'
+
 require 'irb/completion'
 
 module Kernel
