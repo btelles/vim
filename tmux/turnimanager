@@ -1,0 +1,15 @@
+source-file ~/.tmux.conf
+
+new-session -s turnimanager -n turni-RAILS
+send-keys -t turnimanager:1 'cd ~/development/turnimanager' C-m
+send-keys -t turnimanager:1 'be rails s -p 3000' C-m
+
+neww -n dash-VIM -t turnimanager
+send-keys -t turnimanager:2 'cd ~/development/turnimanager' C-m
+send-keys -t turnimanager:2 'vim' C-m
+
+neww -t turnimanager -n redis
+send-keys -t turnimanager:6 'cd ~/development' C-m
+send-keys -t turnimanager:6 'redis-server &' C-m
+
+select-window -t turnimanager:1

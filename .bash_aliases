@@ -15,6 +15,8 @@ alias rc="rails console --debugger"
 alias erp="RAILS_ENV=production&&export RAILS_ENV"
 alias erd="RAILS_ENV=development&&export RAILS_ENV"
 alias t="tmux -u -2"
+alias td="tmux -f ~/.vim/tmux/dashboard attach"
+alias tt="tmux -f ~/.vim/tmux/turnimanager attach"
 #Tails
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
 alias rdbt='tail -1000f /home/bernie/.vim/bundle/vim-ruby-debugger/tmp/ruby_debugger_output'

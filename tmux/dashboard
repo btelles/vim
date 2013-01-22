@@ -1,0 +1,27 @@
+source-file ~/.tmux.conf
+
+new-session -s dashboard -n dash-RAILS
+send-keys -t dashboard:1 'cd ~/development/dashboard' C-m
+send-keys -t dashboard:1 'be rails s -p 3000' C-m
+
+neww -n dash-VIM -t dashboard
+send-keys -t dashboard:2 'cd ~/development/dashboard' C-m
+send-keys -t dashboard:2 'vim' C-m
+
+neww -n account_management -t dashboard
+send-keys -t dashboard:3 'cd ~/development/account_management' C-m
+send-keys -t dashboard:3 'be rails s -p 3001' C-m
+
+neww -t dashboard -n app_suite
+send-keys -t dashboard:4 'cd ~/development/app_suite' C-m
+send-keys -t dashboard:4 'be rails s -p 3003' C-m
+
+neww -t dashboard -n warehouse
+send-keys -t dashboard:5 'cd ~/development/warehouse' C-m
+send-keys -t dashboard:5 'be rackup -p 4000' C-m
+
+neww -t dashboard -n redis
+send-keys -t dashboard:6 'cd ~/development' C-m
+send-keys -t dashboard:6 'redis-server &' C-m
+
+select-window -t dashboard:1
