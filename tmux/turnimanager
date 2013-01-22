@@ -9,7 +9,7 @@ send-keys -t turnimanager:2 'cd ~/development/turnimanager' C-m
 send-keys -t turnimanager:2 'vim' C-m
 
 neww -t turnimanager -n redis
-send-keys -t turnimanager:6 'cd ~/development' C-m
-send-keys -t turnimanager:6 'redis-server &' C-m
+send-keys -t turnimanager:3 'cd ~/development' C-m
+send-keys -t turnimanager:3 'redis-server &' C-m
 
 select-window -t turnimanager:1
