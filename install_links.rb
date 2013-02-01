@@ -1,5 +1,6 @@
 %w{
 .autotest
+.ackrc
 .bash_aliases
 .bash_profile
 .bashrc

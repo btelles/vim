@@ -1,0 +1,33 @@
+# General Ack Settings
+####################################################################
+
+# only search with case sensitivity if there is mixed case
+--smart-case
+
+# Ack Type Settings
+####################################################################
+
+# add some more zope files to the plone type
+--type-add=plone=.zcml,.props,.dtml,.vpy,.kss
+--type-add=python=.cpy,.vpy
+--type-add=coffee=.coffee
+
+# add specific type for page templates
+--type-set=zpt=.pt,.cpt
+--type-set=haml=.haml
+--type-set=sass=.sass,scss
+--type-set=scss=.sass,scss
+
+# code files
+--type-set=js=.js
+--type-set=javascript=.js
+--type-set=ruby=.rb
+
+# add markdown, textile, and reStructuredText
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+
+# plain text CSV files
+--type-set=csv=.txt,.csv,.tsv
+
+# types to ignore by default
+--nogettext

@@ -9,12 +9,19 @@ set ofu=syntaxcomplete#Complete
 set foldmethod=indent
 set hlsearch
 
+
 set nocompatible  " We don't want vi compatibility.
 set list!
 set modifiable
 
+imap <ESC>oA <ESC>ki
+imap <ESC>oB <ESC>ji
+imap <ESC>oC <ESC>li
+imap <ESC>oD <ESC>hi
+
 syntax enable
 set tags=~/.vimtags
+
 
 " Show list of files
 set wildmode=longest,list,full
