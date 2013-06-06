@@ -649,7 +649,7 @@ fun! s:MultiMatch(spflag, mode)
   "   s:all	regexp based on s:pat and the default groups
   " This part is copied and slightly modified from s:Match_wrapper().
   let default = escape(&mps, '[$^.*~\\/?]') . (strlen(&mps) ? "," : "") .
-    \ '\/\*:\*\/,#if\%(def\)\=:#else\>:#elif\>:#endif\>'
+    \ '\/\/,#if\%(def\)\=:#else\>:#elif\>:#endif\>'
   " Allow b:match_words = "GetVimMatchWords()" .
   if b:match_words =~ ":"
     let match_words = b:match_words

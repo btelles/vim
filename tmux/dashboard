@@ -4,9 +4,9 @@ new-session -s dashboard -n dash-RAILS
 send-keys -t dashboard:1 'cd ~/development/dashboard' C-m
 send-keys -t dashboard:1 'be rails s -p 3000' C-m
 
-neww -n dash-VIM -t dashboard
+neww -n dash-term -t dashboard
 send-keys -t dashboard:2 'cd ~/development/dashboard' C-m
-send-keys -t dashboard:2 'vim' C-m
+send-keys -t dashboard:2 'gvim' C-m
 
 neww -n account_management -t dashboard
 send-keys -t dashboard:3 'cd ~/development/account_management' C-m
