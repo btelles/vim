@@ -7,7 +7,6 @@ alias gk='gitk --all'
 alias gs='git status'
 alias gc='git commit'
 alias gap='git add -p'
-alias r='rails'
 alias rss="ruby script/server"
 alias rsc="ruby script/console"
 alias rs="rails server --debugger"
@@ -34,10 +33,7 @@ alias hgprecommit="hg pull && rake features && rake test"
 alias cuc="cucumber -r features"
 
 alias g="git"
-alias gadd="git add -u && git add . && git status"
-alias gi="sudo gem install"
-alias giv="sudo gem install -v"
-alias gci="git pull --rebase && rake && git push"
+alias gf="git fetch"
 
 alias hgdi="hg diff --color=always --git | less -r"
 alias hgclean="hg status | grep -e '^\\?' | sed 's/^\\?//' | xargs -t rm -f"
@@ -51,6 +47,8 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias br="bundle exec rake"
 alias bir='rm Gemfile.lock && bundle install'
+
+alias ct="ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*"
 
 
 # enable color support of ls and also add handy aliases

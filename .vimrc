@@ -1,12 +1,13 @@
 call pathogen#infect()
 
 
+
 filetype on  " Automatically detect file types.
 filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
-set foldmethod=indent
+" set foldmethod=indent
 set hlsearch
 
 
@@ -57,8 +58,8 @@ set viminfo^=!
  
 "Set default window size
 "set lines=63
-set columns=1036
-winpos 1280 0
+"set columns=1036
+"winpos 1280 0
 
 "disable the toolbar
 set guioptions-=T
@@ -188,6 +189,8 @@ nnoremap <F6> :GundoToggle<CR>
 " Fast editing of the .vimrc
   map <leader>e :e! ~/.vimrc<cr>
 
+" Fast ctags
+  nmap <leader>ct :!ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*<cr>
 " Git maps "
   map <leader>gs :Gstatus<cr>
   map <leader>ge :Ge:<cr>
@@ -229,6 +232,10 @@ nnoremap <F6> :GundoToggle<CR>
 no K 8<Up>
 "no J 8<Down>
 no N <C-w><C-w>
+no <C-h> <C-w><C-h>
+no <C-j> <C-w><C-j>
+no <C-k> <C-w><C-k>
+no <C-l> <C-w><C-l>
 
 
 map Y y$
