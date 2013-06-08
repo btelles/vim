@@ -2,7 +2,7 @@ source-file ~/.tmux.conf
 
 new-session -s turnimanager -n vim
 send-keys -t turnimanager:1 'cd ~/development/turnimanager' C-m
-send-keys -t turnimanager:1 'vi' C-m
+send-keys -t turnimanager:1 'vim' C-m
 
 neww -n spec -t turnimanager
 send-keys -t turnimanager:2 'cd ~/development/turnimanager' C-m
