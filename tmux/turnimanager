@@ -1,15 +1,23 @@
 source-file ~/.tmux.conf
 
-new-session -s turnimanager -n turni-RAILS
+new-session -s turnimanager -n zeus
 send-keys -t turnimanager:1 'cd ~/development/turnimanager' C-m
-send-keys -t turnimanager:1 'be rails s -p 3000' C-m
+send-keys -t turnimanager:1 'zeus start' C-m
 
-neww -n dash-VIM -t turnimanager
+neww -n server -t turnimanager
 send-keys -t turnimanager:2 'cd ~/development/turnimanager' C-m
-send-keys -t turnimanager:2 'vim' C-m
+send-keys -t turnimanager:2 'zeus s'
+
+neww -n server -t turnimanager
+send-keys -t turnimanager:3 'cd ~/development/turnimanager' C-m
+send-keys -t turnimanager:3 'zeus rspec spec'
+
+neww -n vim -t turnimanager
+send-keys -t turnimanager:4 'cd ~/development/turnimanager' C-m
+send-keys -t turnimanager:4 'vim' C-m
 
 neww -t turnimanager -n redis
-send-keys -t turnimanager:3 'cd ~/development' C-m
-send-keys -t turnimanager:3 'redis-server &' C-m
+send-keys -t turnimanager:5 'cd ~/development' C-m
+send-keys -t turnimanager:5 'redis-server &' C-m
 
 select-window -t turnimanager:1
