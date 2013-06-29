@@ -2,10 +2,8 @@ require 'rubygems'
 
 require 'wirble'
   Wirble.init
-  Wirble.colorize(
-    :symbol       => :blue,
-    :symbol_prefix => :blue
-  )
+  Wirble::Colorize.colors = Wirble::Colorize.colors.merge(:symbol => :light_blue, :symbol_prefix => :light_blue)
+  Wirble.colorize
 
 #require 'hirb'
 #  Hirb.enable

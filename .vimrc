@@ -7,7 +7,7 @@ filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
-" set foldmethod=indent
+set foldmethod=manual
 set hlsearch
 
 
@@ -58,8 +58,8 @@ set viminfo^=!
  
 "Set default window size
 "set lines=63
-"set columns=1036
-"winpos 1280 0
+" set columns=1036
+" winpos 1280 0
 
 "disable the toolbar
 set guioptions-=T
@@ -108,7 +108,8 @@ set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk
 " colorscheme twilight257
-set guifont=DejaVu\ Sans\ Mono\ Bold\ 11
+colorscheme solarized
+set guifont=DejaVu\ Sans\ Mono\ Bold\ 10
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
