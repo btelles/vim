@@ -61,9 +61,6 @@
 [submodule "bundle/command_t"]
 	path = bundle/command_t
 	url = https://github.com/vim-scripts/Command-T.git
-[submodule "bundle/handlebars"]
-	path = bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/nvm"]
 	path = bundle/nvm
 	url = https://github.com/creationix/nvm.git
