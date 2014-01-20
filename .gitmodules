@@ -58,9 +58,6 @@
 [submodule "bundle/command_t"]
 	path = bundle/command_t
 	url = https://github.com/vim-scripts/Command-T.git
-[submodule "bundle/handlebars"]
-	path = bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/nvm"]
 	path = bundle/nvm
 	url = https://github.com/creationix/nvm.git
@@ -85,3 +82,9 @@
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = http://github.com/sukima/xmledit
+[submodule "bundle/handlebars"]
+	path = bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
