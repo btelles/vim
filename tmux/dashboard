@@ -1,27 +1,35 @@
 source-file ~/.tmux.conf
 
-new-session -s dashboard -n dash-RAILS
+new-session -s dashboard -n dash-term
 send-keys -t dashboard:1 'cd ~/development/dashboard' C-m
-send-keys -t dashboard:1 'be rails s -p 3000' C-m
+send-keys -t dashboard:1 'gvim'
 
-neww -n dash-term -t dashboard
+neww -n rails -t dashboard
 send-keys -t dashboard:2 'cd ~/development/dashboard' C-m
-send-keys -t dashboard:2 'gvim' C-m
+send-keys -t dashboard:2 'zeus server'
+
+neww -n dash-ZEUS -t dashboard
+send-keys -t dashboard:3 'cd ~/development/dashboard' C-m
+send-keys -t dashboard:3 'zeus start' C-m
 
 neww -n account_management -t dashboard
-send-keys -t dashboard:3 'cd ~/development/account_management' C-m
-send-keys -t dashboard:3 'be rails s -p 3001' C-m
+send-keys -t dashboard:4 'cd ~/development/account_management' C-m
+send-keys -t dashboard:4 'be rails s -p 3001' C-m
 
 neww -t dashboard -n app_suite
-send-keys -t dashboard:4 'cd ~/development/app_suite' C-m
-send-keys -t dashboard:4 'be rails s -p 3003' C-m
+send-keys -t dashboard:5 'cd ~/development/app_suite' C-m
+send-keys -t dashboard:5 'be rails s -p 3003' C-m
 
 neww -t dashboard -n warehouse
-send-keys -t dashboard:5 'cd ~/development/warehouse' C-m
-send-keys -t dashboard:5 'be rackup -p 4000' C-m
+send-keys -t dashboard:6 'cd ~/development/warehouse' C-m
+send-keys -t dashboard:6 'be rackup -p 4000' C-m
+
+neww -t dashboard -n messenger
+send-keys -t dashboard:7 'cd ~/development/messenger' C-m
+send-keys -t dashboard:7 'be rails s -p 3232' C-m
 
 neww -t dashboard -n redis
-send-keys -t dashboard:6 'cd ~/development' C-m
-send-keys -t dashboard:6 'redis-server &' C-m
+send-keys -t dashboard:8 'cd ~/development' C-m
+send-keys -t dashboard:8 'sudo service redis-server stop && redis-server &' C-m
 
 select-window -t dashboard:1
