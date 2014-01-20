@@ -168,6 +168,10 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rh :Rhelper 
   noremap <leader>rf :Rfabricator 
   noremap <leader>rj :Rjavascript 
+  noremap <leader>rg :Rails generate 
+  noremap <leader>rd :Rails destroy 
+  noremap <leader>r :Rake 
+
 
 " Gundo toggle
 nnoremap <F6> :GundoToggle<CR>
