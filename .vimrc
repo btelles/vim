@@ -207,6 +207,8 @@ nnoremap <F6> :GundoToggle<CR>
 "map to fuzzy finder text mate stylez
   nnoremap <c-f> :CommandT<CR>
   let g:CommandTMatchWindowAtTop= 1
+  let g:CommandTMatchWindowAtTop= 1
+  set wildignore+=client/node_modules/**
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
