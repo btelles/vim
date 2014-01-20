@@ -18,9 +18,12 @@
 --type-set=javascript=.js
 --type-set=ruby=.rb
 --type-set=coffee=.coffee
+--type-set=handlebars=.handlebars
 
 # add markdown, textile, and reStructuredText
 --type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
 
 # plain text CSV files
 --type-set=csv=.txt,.csv,.tsv
+
+--ignore-dir=coverage
