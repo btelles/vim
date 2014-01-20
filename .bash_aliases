@@ -20,6 +20,8 @@ alias tt="tmux -f ~/.vim/tmux/turnimanager attach"
 alias ms='mailtrap start && tail -60f /var/tmp/mailtrap.output'
 alias rdbt='tail -1000f /home/bernie/.vim/bundle/vim-ruby-debugger/tmp/ruby_debugger_output'
 
+alias gvim='UBUNTU_MENUPROXY= gvim'
+
 alias chrome='/opt/google/chrome/google-chrome %U'
 
 # ssh aliases
@@ -46,6 +48,8 @@ alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
 alias br="bundle exec rake"
+alias zr="zeus rake"
+alias zt="zeus rspec"
 alias bir='rm Gemfile.lock && bundle install'
 
 alias ct="ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*"
