@@ -32,11 +32,6 @@ set wildmenu
 let g:ruby_debugger_builtin_sender = 0
 let g:ruby_debugger_no_maps = 1
 
-"delimitMate options
-let delimitMate_quotes = "\" ' ` *"
-let delimitMate_expand_cr = 0
-let delimitMate_expand_space = 1
-
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
