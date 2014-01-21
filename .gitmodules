@@ -79,15 +79,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = git@github.com:btelles/zencoding-vim
-[submodule "bundle/xmledit"]
-	path = bundle/xmledit
-	url = http://github.com/sukima/xmledit
-[submodule "bundle/handlebars"]
-	path = bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = git://github.com/jwhitley/vim-matchit.git
