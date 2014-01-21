@@ -46,9 +46,6 @@
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule "bundle/vim-xolox"]
-	path = bundle/vim-xolox
-	url = https://github.com/zalun/vim-xolox.git
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
@@ -91,3 +88,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/vim-matchit"]
+	path = bundle/vim-matchit
+	url = git://github.com/jwhitley/vim-matchit.git

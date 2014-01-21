@@ -32,11 +32,6 @@ set wildmenu
 let g:ruby_debugger_builtin_sender = 0
 let g:ruby_debugger_no_maps = 1
 
-"delimitMate options
-let delimitMate_quotes = "\" ' ` *"
-let delimitMate_expand_cr = 0
-let delimitMate_expand_space = 1
-
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
@@ -173,6 +168,10 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rh :Rhelper 
   noremap <leader>rf :Rfabricator 
   noremap <leader>rj :Rjavascript 
+  noremap <leader>rg :Rails generate 
+  noremap <leader>rd :Rails destroy 
+  noremap <leader>r :Rake 
+
 
 " Gundo toggle
 nnoremap <F6> :GundoToggle<CR>
@@ -207,6 +206,8 @@ nnoremap <F6> :GundoToggle<CR>
 "map to fuzzy finder text mate stylez
   nnoremap <c-f> :CommandT<CR>
   let g:CommandTMatchWindowAtTop= 1
+  let g:CommandTMatchWindowAtTop= 1
+  set wildignore+=client/node_modules/**
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
