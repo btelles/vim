@@ -28,7 +28,8 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	cb = rev-parse --abbrev-ref HEAD
-  pcb = ! sh -c '(git push origin $(git cb))'ls = ls-files
+  pcb = ! sh -c '(git push origin $(git cb))'
+  ls = ls-files
 [color]
 	branch = auto
 	diff = auto
