@@ -100,11 +100,13 @@ set autowrite  " Writes on make/shell commands
 set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk
 " colorscheme twilight257
-colorscheme solarized
-set guifont=DejaVu\ Sans\ Mono\ Bold\ 10
+colorscheme solarized_bernie
+
+" set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
+set guifont=Consolas\ 12
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
@@ -243,7 +245,6 @@ no <C-l> <C-w><C-l>
 map Y y$
 nnoremap <silent> <C-L> :nohls<CR><C-L>
 
-inoremap ø <C-O>o
 inoremap <M-o> <C-O>o
 " Emacs style mappings
 inoremap <C-A> <C-O>^

@@ -124,7 +124,10 @@ export PATH=$PATH:/usr/java/jre1.7.0_09/bin
 
 ########### Bernie Customized
 source ~/.rvm/scripts/rvm
-export PATH=$PATH:$HOME/bin:$HOME/node_modules/.bin:$HOME/local/node/bin
+export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/local/node/bin
 export EDITOR=gvim
 source $HOME/.nvm/nvm.sh
 source $HOME/.vim/git-prompt/git-prompt.sh
+
+
+
