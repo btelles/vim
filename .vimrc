@@ -1,4 +1,4 @@
-call pathogen#infect()
+execute pathogen#infect()
 
 
 
@@ -35,6 +35,9 @@ let g:ruby_debugger_no_maps = 1
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
@@ -103,7 +106,7 @@ set nowrap  " Line wrapping off
 set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk
 " colorscheme twilight257
-colorscheme solarized_bernie
+colorscheme solarized
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
 set guifont=Consolas\ 12

@@ -1,0 +1,11 @@
+snippet fg "FactoryGirl.create($0"
+FactoryGirl.create(:${0:user})
+endsnippet
+
+snippet fgd "FactoryGirl.create($0"
+FactoryGirl.define do
+  factory :${1:lower_class_name}${2:, class: ${3:ClassName}} do
+    $0
+	end
+end
+endsnippet
