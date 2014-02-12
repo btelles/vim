@@ -1,4 +1,4 @@
-call pathogen#infect()
+execute pathogen#infect()
 
 
 
@@ -35,6 +35,9 @@ let g:ruby_debugger_no_maps = 1
 let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
+
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
@@ -106,7 +109,7 @@ set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 colorscheme solarized_bernie
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
-set guifont=Consolas\ 12
+set guifont=Consolas\ 20
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
@@ -144,7 +147,9 @@ set mouse=a  " Mouse in all modes
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
 nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 imap <C-A-v> <Esc><C-A-v>a
-
+ 
+" <C-r> for using selection as matching text for replacement
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Move lines up and Down
 nmap <C-Up> jjtP
