@@ -13,9 +13,6 @@
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = https://github.com/btelles/vim-ruby-debugger.git
-[submodule "ruby"]
-	path = ruby
-	url = https://github.com/jamis/fuzzy_file_finder.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
