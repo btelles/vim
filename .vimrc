@@ -36,6 +36,8 @@ let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
 
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger  "<S-tab>"
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
     let l = line(".")
