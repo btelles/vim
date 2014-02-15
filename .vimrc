@@ -106,7 +106,8 @@ set nowrap  " Line wrapping off
 set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme vividchalk
 " colorscheme twilight257
-colorscheme solarized_bernie
+" colorscheme solarized_bernie
+" colorscheme intellij
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
 set guifont=Consolas\ 20

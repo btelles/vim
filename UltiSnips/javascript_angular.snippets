@@ -1,0 +1,22 @@
+extends javascript
+
+snippet ngf "$.factory('$', func(){}" !b
+${1:app}.factory("${2:User}", function(${3:$scope}${4:, ${5:injectibles}}) {
+  $0
+}
+endsnippet
+
+snippet ngc "$.controller('$', func(){}" !b
+${1:app}.controller("${2:AppCtrl}", function(${3:$scope}${4:, ${5:injectibles}}) {
+  $0
+}
+endsnippet
+
+snippet ngd "$.directive('$', func(){}" !b
+${1:app}.directive("${2:tag-name}", function(${3:$scope}${4:, ${5:injectibles}}) {
+  return {
+    restrict: "${6:E}",
+    $0
+  }
+}
+endsnippet
