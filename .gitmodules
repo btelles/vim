@@ -13,9 +13,6 @@
 [submodule "bundle/vim-ruby-debugger"]
 	path = bundle/vim-ruby-debugger
 	url = https://github.com/btelles/vim-ruby-debugger.git
-[submodule "ruby"]
-	path = ruby
-	url = https://github.com/jamis/fuzzy_file_finder.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
@@ -31,9 +28,6 @@
 [submodule "git-prompt"]
   path = git-prompt
   url = https://github.com/lvv/git-prompt
-[submodule "bundle/cucumber.vim"]
-	path = bundle/cucumber.vim
-	url = https://github.com/tpope/vim-cucumber.git
 [submodule "bundle/better-snipmate-snippets"]
 	path = bundle/better-snipmate-snippets
 	url = git://github.com/bartekd/better-snipmate-snippets.git
@@ -43,18 +37,9 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git@github.com:btelles/snipmate.vim.git
-[submodule "z_shortcuts"]
-	path = z_shortcuts
-	url = https://github.com/rupa/z.git
 [submodule "bundle/command_t"]
 	path = bundle/command_t
 	url = https://github.com/vim-scripts/Command-T.git
@@ -76,9 +61,6 @@
 [submodule "colors/tomorrow-theme"]
 	path = colors/tomorrow-theme
 	url = https://github.com/btelles/tomorrow-theme.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git@github.com:btelles/zencoding-vim
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = git://github.com/jwhitley/vim-matchit.git
