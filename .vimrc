@@ -110,7 +110,7 @@ set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 " colorscheme intellij
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
-set guifont=Consolas\ 20
+set guifont=Consolas\ 12
  
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
