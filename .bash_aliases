@@ -2,11 +2,19 @@ alias utime='sudo /etc/network/if-up.d/ntpdate'
 alias u='cd ..'
 alias which="type -path"
 alias x=startx
+
+# git
+alias gap='git add -p'
+alias gc='git commit'
 alias gg='git gui'
 alias gk='gitk --all'
 alias gs='git status'
-alias gc='git commit'
-alias gap='git add -p'
+
+# git5
+alias g5='git5'
+alias ge='git5 export'
+alias gsync='git5 sync'
+
 alias rss="ruby script/server"
 alias rsc="ruby script/console"
 alias rs="rails server --debugger"
