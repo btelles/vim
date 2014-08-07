@@ -91,3 +91,6 @@
 [submodule "bundle/utilsnips"]
 	path = bundle/utilsnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
