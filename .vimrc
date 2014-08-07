@@ -289,3 +289,7 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+
+au BufRead,BufNewFile *.spt set filetype=cheetah
+au BufRead,BufNewFile *.spt set syntax=cheetah
