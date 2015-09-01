@@ -3,6 +3,9 @@ alias u='cd ..'
 alias which="type -path"
 alias x=startx
 
+# google/data
+alias startsffe=/google/data/ro/projects/static-on-bigtable/startsffe
+
 # git
 alias gap='git add -p'
 alias gc='git commit'
@@ -14,6 +17,8 @@ alias gs='git status'
 alias g5='git5'
 alias ge='git5 export'
 alias gsync='git5 sync'
+
+alias loop="/google/src/head/depot/google3/video/youtube/testing/tools/build_and_test"
 
 alias rss="ruby script/server"
 alias rsc="ruby script/console"
@@ -61,7 +66,6 @@ alias zt="zeus rspec"
 alias bir='rm Gemfile.lock && bundle install'
 
 alias ct="ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*"
-
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

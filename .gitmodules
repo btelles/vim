@@ -89,7 +89,7 @@
 	path = bundle/jshint2.vim
 	url = git://github.com/Shutnik/jshint2.vim.git
 [submodule "bundle/utilsnips"]
-	path = bundle/utilsnips
+	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
