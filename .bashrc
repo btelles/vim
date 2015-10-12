@@ -106,27 +106,43 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
-# if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
-# 	RBENV_ROOT=$HOME/.rbenv
-# elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
-# 	RBENV_ROOT=/usr/local/rbenv
-# fi
-# 
-# export RBENV_ROOT
-# export PATH="${RBENV_ROOT}/bin:${PATH}"
-# 
-# if [[ -n "${RBENV_ROOT}" ]]; then
-# 	eval "$($RBENV_ROOT/bin/rbenv init -)"
-# fi
-
-export PATH=$PATH:/usr/java/jre1.7.0_09/bin
-
 ########### Bernie Customized
-source ~/.rvm/scripts/rvm
+
+if [[ -e "${HOME}/.rbenv/bin/rbenv" ]]; then
+	RBENV_ROOT=$HOME/.rbenv
+elif [[ -e "/usr/local/rbenv/bin/rbenv" ]]; then
+	RBENV_ROOT=/usr/local/rbenv
+fi
+ 
+export RBENV_ROOT
+export PATH="${RBENV_ROOT}/bin:${PATH}"
+
+if [[ -n "${RBENV_ROOT}" ]]; then
+	eval "$($RBENV_ROOT/bin/rbenv init -)"
+fi
+
+
+if [[ -e "${HOME}/.pyenv/bin/pyenv" ]]; then
+	PYENV_ROOT=$HOME/.pyenv
+elif [[ -e "/usr/local/pyenv/bin/pyenv" ]]; then
+	PYENV_ROOT=/usr/local/pyenv
+fi
+ 
+export PYENV_ROOT
+export PATH="${PYENV_ROOT}/bin:${PATH}"
+
+if [[ -n "${PYENV_ROOT}" ]]; then
+	eval "$($PYENV_ROOT/bin/pyenv init -)"
+fi
+
+
 export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/local/node/bin
+
 export EDITOR=gvim
-source $HOME/.nvm/nvm.sh
+
+export NVM_DIR="/home/bernie/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 source $HOME/.vim/git-prompt/git-prompt.sh
 
 
