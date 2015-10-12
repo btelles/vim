@@ -38,8 +38,8 @@ let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
 
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
@@ -107,11 +107,12 @@ set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 
-" colorscheme vividchalk
-" colorscheme twilight257
 if has('gui_running')
   " GUI colors
   colorscheme solarized
+  " colorscheme vividchalk
+  " colorscheme twilight257
+  " colorscheme intellij
 else
   " Non-GUI (terminal) colors
   colorscheme default
@@ -156,7 +157,9 @@ set mouse=a  " Mouse in all modes
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
 nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 imap <C-A-v> <Esc><C-A-v>a
-
+ 
+" <C-r> for using selection as matching text for replacement
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " Move lines up and Down
 nmap <C-Up> jjtP
