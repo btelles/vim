@@ -40,9 +40,6 @@
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
-[submodule "bundle/command_t"]
-	path = bundle/command_t
-	url = https://github.com/vim-scripts/Command-T.git
 [submodule "bundle/nvm"]
 	path = bundle/nvm
 	url = https://github.com/creationix/nvm.git
