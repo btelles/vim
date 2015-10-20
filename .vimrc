@@ -7,7 +7,7 @@ filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
-set foldmethod=manual
+" set foldmethod=manual
 set hlsearch
 
 
@@ -52,6 +52,8 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
+set foldmethod=syntax
+set fdls=10
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
@@ -304,6 +306,7 @@ imap <C-w> <Esc>:tabclose<CR>
 
 au BufRead,BufNewFile *.spt set filetype=cheetah
 au BufRead,BufNewFile *.spt set syntax=cheetah
+
 
 " Google stuff
 source /usr/share/vim/google/google.vim
