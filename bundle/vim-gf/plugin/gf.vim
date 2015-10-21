@@ -28,7 +28,7 @@ function! s:matchcursor(pat)
   return ""
 endfunction
 
-function! v:PyFind()
+function! g:PyFind()
   if filereadable(expand("<cfile>"))
     return expand("<cfile>")
   endif
@@ -56,7 +56,7 @@ function! s:Find(count,cmd,...)
       let file = s:RailsIncludefind(file)
     endif
   else
-    let file = s:PyFind()
+    let file = g:PyFind()
     let tail = ""
   endif
   call s:findedit((a:count==1?'' : a:count).a:cmd,file.tail,str)
