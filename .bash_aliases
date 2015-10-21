@@ -52,7 +52,7 @@ alias zr="zeus rake"
 alias zt="zeus rspec"
 alias bir='rm Gemfile.lock && bundle install'
 
-alias ct="ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*"
+# alias ct="ctags-exuberant -R --exclude=.git --exclude=log * `gem env gemdir`/*"
 
 
 # enable color support of ls and also add handy aliases
