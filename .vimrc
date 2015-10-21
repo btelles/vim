@@ -309,26 +309,26 @@ au BufRead,BufNewFile *.spt set syntax=cheetah
 
 
 " Google stuff
-source /usr/share/vim/google/google.vim
+"source /usr/share/vim/google/google.vim
 
 " :BlazeDepsUpdate
-Glug blazedeps
+"Glug blazedeps
 
-Glug codefmt-google auto_filetypes+=blazebuild
-Glug piper plugin[mappings]
-Glug clang-format plugin[mappings]
+"Glug codefmt-google auto_filetypes+=blazebuild
+"Glug piper plugin[mappings]
+"Glug clang-format plugin[mappings]
 " nnoremap <leader>ff :AutoFormatBuffer<CR>
 
-Glug findinc
-nnoremap gf :FindIncRelatedFiles<CR>
+"Glug findinc
+"nnoremap gf :FindIncRelatedFiles<CR>
 
-Glug relatedfiles plugin[mappings]
-Glug g4
-Glug ultisnips-google
+"Glug relatedfiles plugin[mappings]
+"Glug g4
+"Glug ultisnips-google
 
-Glug blaze plugin[mappings]='<leader>b'
-let g:blazevim_notify_after_blaze = 1
+"Glug blaze plugin[mappings]='<leader>b'
+"let g:blazevim_notify_after_blaze = 1
 
-Glug corpweb
-noremap <unique> <leader>cs :CorpWebCs<Space>
-noremap <unique> <leader>cf :CorpWebCsFile<CR>
+"Glug corpweb
+"noremap <unique> <leader>cs :CorpWebCs<Space>
+"noremap <unique> <leader>cf :CorpWebCsFile<CR>
