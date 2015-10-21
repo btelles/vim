@@ -7,9 +7,11 @@ filetype plugin on
 filetype indent on
 set ofu=syntaxcomplete#Complete
 
-set foldmethod=manual
+" set foldmethod=manual
 set hlsearch
 
+
+set colorcolumn=80
 
 set nocompatible  " We don't want vi compatibility.
 set list!
@@ -50,6 +52,8 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
+set foldmethod=syntax
+set fdls=10
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
@@ -104,10 +108,17 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
-" colorscheme vividchalk
-" colorscheme twilight257
-colorscheme solarized
-" colorscheme intellij
+
+if has('gui_running')
+  " GUI colors
+  colorscheme solarized
+  " colorscheme vividchalk
+  " colorscheme twilight257
+  " colorscheme intellij
+else
+  " Non-GUI (terminal) colors
+  colorscheme default
+endif
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
 set guifont=Consolas\ 12
@@ -159,8 +170,6 @@ nmap <C-Down> jjp
 vmap <C-Up> xtP`[V`]
 vmap <C-Down> xp`[V`]
 
-nmap <leader>bb <Plug>BlockToggle
-
 " strip white spaces
   nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
@@ -178,7 +187,6 @@ nmap <leader>bb <Plug>BlockToggle
   noremap <leader>rj :Rjavascript 
   noremap <leader>rg :Rails generate 
   noremap <leader>rd :Rails destroy 
-  noremap <leader>r :Rake 
 
 
 " Gundo toggle
@@ -187,9 +195,6 @@ nnoremap <F6> :GundoToggle<CR>
 " describe activerecord tables
   "noremap <Ctrl-a>= :Align =<CR>
   "noremap <Ctrl-a>| :Align |<CR>
-
-" Simple Fold
-"map <unique> <silent> <Leader>f <Plug>SimpleFold_Fold
 
 " Fast saving
   nmap <leader>w :w!<cr>
@@ -212,13 +217,14 @@ nnoremap <F6> :GundoToggle<CR>
   map <silent> <m-n> :cn <cr>
 
 "map to fuzzy finder text mate stylez
-  nnoremap <c-f> :CommandT<CR>
-  let g:CommandTMatchWindowAtTop= 1
-  let g:CommandTMatchWindowAtTop= 1
-  set wildignore+=client/node_modules/**
+  " nnoremap <c-f> :CommandT<CR>
+  " let g:CommandTMatchWindowAtTop= 1
+  " let g:CommandTMatchWindowAtTop= 1
+  " set wildignore+=client/node_modules/**
 
 "nerd tree toggle
   nmap <silent> <Leader>p :NERDTreeToggle<CR>
+  nmap <silent> <Leader>pc :NERDTree %<CR>
   let NERDTreeMouseMode = 3
 
 " unhighlight text
@@ -292,3 +298,37 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+nmap <C-t> <Esc>:tabnew<CR>
+imap <C-t> <Esc>:tabnew<CR>
+nmap <C-w> <Esc>:tabclose<CR>
+imap <C-w> <Esc>:tabclose<CR>
+
+au BufRead,BufNewFile *.spt set filetype=cheetah
+au BufRead,BufNewFile *.spt set syntax=cheetah
+
+
+" Google stuff
+source /usr/share/vim/google/google.vim
+
+" :BlazeDepsUpdate
+Glug blazedeps
+
+Glug codefmt-google auto_filetypes+=blazebuild
+Glug piper plugin[mappings]
+Glug clang-format plugin[mappings]
+" nnoremap <leader>ff :AutoFormatBuffer<CR>
+
+Glug findinc
+nnoremap gf :FindIncRelatedFiles<CR>
+
+Glug relatedfiles plugin[mappings]
+Glug g4
+Glug ultisnips-google
+
+Glug blaze plugin[mappings]='<leader>b'
+let g:blazevim_notify_after_blaze = 1
+
+Glug corpweb
+noremap <unique> <leader>cs :CorpWebCs<Space>
+noremap <unique> <leader>cf :CorpWebCsFile<CR>

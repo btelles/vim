@@ -12,11 +12,13 @@
 --type-set=haml=.haml
 --type-set=erb=.erb
 --type-set=sass=.sass,scss
+--type-set=spitfire=.spt
 
 # code files
 --type-set=js=.js
 --type-set=javascript=.js
 --type-set=ruby=.rb
+--type-set=python=.py
 --type-set=coffee=.coffee
 --type-set=handlebars=.handlebars
 
