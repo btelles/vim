@@ -57,7 +57,7 @@ set fdls=10
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
- 
+
 "Set default window size
 "set lines=63
 " set columns=1036
@@ -99,7 +99,7 @@ let g:miniBufExplModSelTarget = 1
 
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
- 
+
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
@@ -122,7 +122,7 @@ endif
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
 set guifont=Consolas\ 12
- 
+
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
@@ -139,7 +139,7 @@ set expandtab
 set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
 
 
- 
+
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
@@ -150,16 +150,16 @@ set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
- 
+
 " gvim specific
 set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes 
+set mouse=a  " Mouse in all modes
 
 " Copy and Paste to clipboard
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
 nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 imap <C-A-v> <Esc><C-A-v>a
- 
+
 " <C-r> for using selection as matching text for replacement
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
@@ -178,15 +178,15 @@ vmap <C-Down> xp`[V`]
 
 " show alternate file
   noremap <leader>a :A<CR>
-  noremap <leader>rc :Rcontroller 
-  noremap <leader>rm :Rmodel 
-  noremap <leader>rs :Rspec 
-  noremap <leader>rv :Rview 
-  noremap <leader>rh :Rhelper 
-  noremap <leader>rf :Rfabricator 
-  noremap <leader>rj :Rjavascript 
-  noremap <leader>rg :Rails generate 
-  noremap <leader>rd :Rails destroy 
+  noremap <leader>rc :Rcontroller
+  noremap <leader>rm :Rmodel
+  noremap <leader>rs :Rspec
+  noremap <leader>rv :Rview
+  noremap <leader>rh :Rhelper
+  noremap <leader>rf :Rfabricator
+  noremap <leader>rj :Rjavascript
+  noremap <leader>rg :Rails generate
+  noremap <leader>rd :Rails destroy
 
 
 " Gundo toggle
@@ -332,3 +332,16 @@ let g:blazevim_notify_after_blaze = 1
 Glug corpweb
 noremap <unique> <leader>cs :CorpWebCs<Space>
 noremap <unique> <leader>cf :CorpWebCsFile<CR>
+
+
+set updatetime=10
+
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
+        exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'
+    else
+        match none
+    endif
+endfunction
+
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
