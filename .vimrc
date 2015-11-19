@@ -178,15 +178,15 @@ vmap <C-Down> xp`[V`]
 
 " show alternate file
   noremap <leader>a :A<CR>
-  noremap <leader>rc :Rcontroller
-  noremap <leader>rm :Rmodel
-  noremap <leader>rs :Rspec
-  noremap <leader>rv :Rview
-  noremap <leader>rh :Rhelper
-  noremap <leader>rf :Rfabricator
-  noremap <leader>rj :Rjavascript
-  noremap <leader>rg :Rails generate
-  noremap <leader>rd :Rails destroy
+  noremap <leader>rc :Rcontroller 
+  noremap <leader>rm :Rmodel 
+  noremap <leader>rs :Rspec 
+  noremap <leader>rv :Rview 
+  noremap <leader>rh :Rhelper 
+  noremap <leader>rf :Rfabricator 
+  noremap <leader>rj :Rjavascript 
+  noremap <leader>rg :Rails generate 
+  noremap <leader>rd :Rails destroy 
 
 
 " Gundo toggle
@@ -227,6 +227,9 @@ nnoremap <F6> :GundoToggle<CR>
   nmap <silent> <Leader>pc :NERDTree %<CR>
   let NERDTreeMouseMode = 3
 
+"Tagbar toggle
+  nmap <F8> :TagbarToggle<CR>
+  imap <F8> :TagbarToggle<CR>
 " unhighlight text
   nmap <silent> ,/ :nohlsearch<CR>
 
@@ -338,7 +341,7 @@ set updatetime=10
 
 function! HighlightWordUnderCursor()
     if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
-        exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'
+        exec 'match' 'Folded' '/\V\<'.expand('<cword>').'\>/'
     else
         match none
     endif

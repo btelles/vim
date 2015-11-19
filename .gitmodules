@@ -16,9 +16,6 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
-[submodule "git-prompt"]
-  path = git-prompt
-  url = https://github.com/lvv/git-prompt
 [submodule "bundle/better-snipmate-snippets"]
 	path = bundle/better-snipmate-snippets
 	url = git://github.com/bartekd/better-snipmate-snippets.git
@@ -76,3 +73,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "git-prompt"]
+	path = git-prompt
+	url = git@github.com:btelles/git-prompt.git
