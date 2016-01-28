@@ -1,3 +1,4 @@
+extends javascript
 # Some useful Unicode entities
 # Non-Breaking Space
 snippet nbs
@@ -188,3 +189,9 @@ snippet table
 	</table>${4}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
+snippet tf
+	<test-fixture id="${1:basic}">
+	  <template>
+	    <${2:custom_element}></$2>
+	  </template>
+	</test-fixture>
