@@ -323,6 +323,9 @@ endfunction
 
 autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
+let g:ctrlp_match_window = 'top,order:ttb,max:20'
+let g:ctrlp_working_path_mode = ''
+
 " Google stuff
 if filereadable("/usr/share/vim/google/google.vim")
   source /usr/share/vim/google/google.vim

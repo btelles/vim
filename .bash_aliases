@@ -3,6 +3,9 @@ alias u='cd ..'
 alias which="type -path"
 alias x=startx
 
+alias wms="cd ~/code/cloud/wms"
+alias wmsp="cd ~/code/cloud/wms/polymer"
+
 # google/data
 alias startsffe=/google/data/ro/projects/static-on-bigtable/startsffe
 
