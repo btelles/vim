@@ -57,7 +57,7 @@ set fdls=10
 
 " Add recently accessed projects menu (project plugin)
 set viminfo^=!
- 
+
 "Set default window size
 "set lines=63
 " set columns=1036
@@ -99,7 +99,7 @@ let g:miniBufExplModSelTarget = 1
 
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
- 
+
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
@@ -122,7 +122,7 @@ endif
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
 set guifont=Consolas\ 12
- 
+
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
@@ -139,7 +139,7 @@ set expandtab
 set statusline=%#warningmsg#%{SyntasticStatuslineFlag()}%*\ %t\ %l,%v
 
 
- 
+
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
@@ -150,16 +150,16 @@ set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
- 
+
 " gvim specific
 set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes 
+set mouse=a  " Mouse in all modes
 
 " Copy and Paste to clipboard
 vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>
 nmap <C-A-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 imap <C-A-v> <Esc><C-A-v>a
- 
+
 " <C-r> for using selection as matching text for replacement
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
@@ -227,6 +227,9 @@ nnoremap <F6> :GundoToggle<CR>
   nmap <silent> <Leader>pc :NERDTree %<CR>
   let NERDTreeMouseMode = 3
 
+"Tagbar toggle
+  nmap <F8> :TagbarToggle<CR>
+  imap <F8> :TagbarToggle<CR>
 " unhighlight text
   nmap <silent> ,/ :nohlsearch<CR>
 
@@ -308,27 +311,44 @@ au BufRead,BufNewFile *.spt set filetype=cheetah
 au BufRead,BufNewFile *.spt set syntax=cheetah
 
 
+set updatetime=10
+
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
+        exec 'match' 'Folded' '/\V\<'.expand('<cword>').'\>/'
+    else
+        match none
+    endif
+endfunction
+
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+
+let g:ctrlp_match_window = 'top,order:ttb,max:20'
+let g:ctrlp_working_path_mode = ''
+
 " Google stuff
-"source /usr/share/vim/google/google.vim
+if filereadable("/usr/share/vim/google/google.vim")
+  source /usr/share/vim/google/google.vim
 
-" :BlazeDepsUpdate
-"Glug blazedeps
+  " :BlazeDepsUpdate
+  Glug blazedeps
 
-"Glug codefmt-google auto_filetypes+=blazebuild
-"Glug piper plugin[mappings]
-"Glug clang-format plugin[mappings]
-" nnoremap <leader>ff :AutoFormatBuffer<CR>
+  Glug codefmt-google auto_filetypes+=blazebuild
+  Glug piper plugin[mappings]
+  Glug clang-format plugin[mappings]
+  " nnoremap <leader>ff :AutoFormatBuffer<CR>
 
-"Glug findinc
-"nnoremap gf :FindIncRelatedFiles<CR>
+  Glug findinc
+  nnoremap gf :FindIncRelatedFiles<CR>
 
-"Glug relatedfiles plugin[mappings]
-"Glug g4
-"Glug ultisnips-google
+  Glug relatedfiles plugin[mappings]
+  Glug g4
+  Glug ultisnips-google
 
-"Glug blaze plugin[mappings]='<leader>b'
-"let g:blazevim_notify_after_blaze = 1
+  Glug blaze plugin[mappings]='<leader>b'
+  let g:blazevim_notify_after_blaze = 1
 
-"Glug corpweb
-"noremap <unique> <leader>cs :CorpWebCs<Space>
-"noremap <unique> <leader>cf :CorpWebCsFile<CR>
+  Glug corpweb
+  noremap <unique> <leader>cs :CorpWebCs<Space>
+  noremap <unique> <leader>cf :CorpWebCsFile<CR>
+endif
