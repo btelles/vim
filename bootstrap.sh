@@ -9,7 +9,7 @@
 #
 #   rm -rf .vim .rbenv .pyenv .nvm .ssh/id*h
 
-temp_file = "/temp/bootstrap.out"
+temp_file = "/tmp/bootstrap.out"
 
 echo -n "Installing dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
