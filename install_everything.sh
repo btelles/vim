@@ -9,7 +9,7 @@ echo -n "Enter the password for your ssh key:"
 read pswd
 
 echo -n "Generating ssh key..."
-ssh-keygen -f ~/.ssh/id_rsa -N $pswd
+ssh-keygen -f ~/.ssh/id_rsa -N `$pswd`
 
 echo -n "Add the following ssh key to my github account:"
 cat ~/.ssh/id_rsa.pub
