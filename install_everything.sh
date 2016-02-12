@@ -1,14 +1,13 @@
 #!/bin/bash
 
-echo "Make sure you have root access before you start."
-echo "Press [Enter] key to continue..."
 
 echo "Installing dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev git
 
 echo "Generating ssh key..."
-ssh-keygen
+read -p "Enter the password for your ssh key:" pswd
+ssh-keygen -f ~/.ssh/id_rsa -N $pswd
 
 echo "Add the following ssh key to my github account:"
 cat ~/.ssh/id_rsa.pub
