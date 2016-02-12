@@ -2,7 +2,12 @@
 
 # This is a bootstrap script for setting up a fresh Ubuntu install.
 # To use it, copy the following into your terminal:
-# curl -o- https://raw.githubusercontent.com/btelles/vim/master/bootstrap.sh | bash
+#
+#   curl -o- https://raw.githubusercontent.com/btelles/vim/master/bootstrap.sh | bash
+#
+# To undo most things, execute the following:
+#
+#   rm -rf .vim .rbenv .pyenv .nvm .ssh/id*
 
 temp_file = "/temp/bootstrap.out"
 
