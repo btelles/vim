@@ -7,17 +7,17 @@
 #
 # To undo most things, execute the following:
 #
-#   rm -rf .vim .rbenv .pyenv .nvm .ssh/id*
+#   rm -rf .vim .rbenv .pyenv .nvm .ssh/id*h
 
 temp_file = "/temp/bootstrap.out"
 
 echo -n "Installing dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev git \
-tmux > $temp_file
+tmux > ${temp_file}
 
 echo "Installing vim-gnome dependencies..."
-sudo apt-get build-dep vim-gnome > $temp_file
+sudo apt-get build-dep vim-gnome > ${temp_file}
 
 echo "Enter the password for your ssh key:"
 read pswd </dev/tty || { rc=$?; echo "Unable to read from TTY" >&2; exit "$rc"; }
@@ -32,10 +32,10 @@ echo "Re-enter the password for your ssh key:"
 ssh-add </dev/tty
 
 echo "Cloning vim repo..."
-git clone git@github.com:btelles/vim.git ~/.vim > $temp_file
+git clone git@github.com:btelles/vim.git ~/.vim > ${temp_file}
 
 echo "Installing vim submodules..."
-(cd ~/.vim && git submodule init > $temp_file && git submodule update > $temp_file)
+(cd ~/.vim && git submodule init > ${temp_file} && git submodule update > ${temp_file})
 
 ~/.vim/gnome-terminal-colors-solarized/install.sh -s light -p Default
 
@@ -62,8 +62,8 @@ echo "installing VIM..."
     --enable-gnome-check \
     --with-features=huge \
     --with-x \
-    --with-python-config-dir=/usr/lib/python2.7/config > $temp_file &&
-make -j 4 > $temp_file && sudo make install > $temp_file
+    --with-python-config-dir=/usr/lib/python2.7/config > ${temp_file} &&
+make -j 4 > ${temp_file} && sudo make install > ${temp_file}
 )
 
 echo "Copying Consolas font to local directory..."
@@ -71,12 +71,12 @@ mkdir -p ~/.fonts
 cp ~/.vim/Consolas.ttf ~/.fonts
 
 echo "Installing Rbenv..."
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv > $temp_file
-cd ~/.rbenv && src/configure > $temp_file && make -C src > $temp_file
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build > $temp_file
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv > ${temp_file}
+cd ~/.rbenv && src/configure > ${temp_file} && make -C src > ${temp_file}
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build > ${temp_file}
 
 echo "Installing PyEnv..."
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv > $temp_file
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv > ${temp_file}
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash > $temp_file
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash > ${temp_file}
