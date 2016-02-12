@@ -11,27 +11,25 @@ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev g
 sudo apt-get build-dep vim-gnome
 
 echo "Enter the password for your ssh key:"
-
-read pswd
+read pswd </dev/tty || { rc=$?; echo "Unable to read from TTY" >&2; exit "$rc"; }
 
 echo "Generating ssh key..."
-
 ssh-keygen -f ~/.ssh/id_rsa -N "$pswd"
 
 echo "Add the following ssh key to my github account:"
-
 cat ~/.ssh/id_rsa.pub
 
 echo "Re-enter the password for your ssh key:"
-
-ssh-add
+ssh-add </dev/tty
 
 echo "Press [Enter] key to continue..."
-
-read
+read </dev/tty
 
 echo "Cloning vim repo..."
 git clone git@github.com:btelles/vim.git ~/.vim
+
+echo "Installing vim submodules..."
+(cd ~/.vim && git submodule init && git submodule update)
 
 ~/.vim/gnome-terminal-colors-solarized/install.sh -s light -p Default
 
@@ -45,9 +43,6 @@ ln -fs ~/.vim/.bash_aliases ~/
 ln -fs ~/.vim/.bash_profile ~/
 ln -fs ~/.vim/.rspec ~/
 ln -fs ~/.vim/.autotest ~/
-
-echo "Installing vim submodules..."
-(cd ~/.vim && git submodule init && git submodule update)
 
 echo "installing VIM"
 (cd ~/.vim/vim &&
