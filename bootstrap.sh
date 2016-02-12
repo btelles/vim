@@ -4,11 +4,15 @@
 # To use it, copy the following into your terminal:
 # curl -o- https://raw.githubusercontent.com/btelles/vim/master/bootstrap.sh | bash
 
+temp_file = "/temp/bootstrap.out"
+
 echo -n "Installing dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev git
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev git \
+tmux > $temp_file
 
-sudo apt-get build-dep vim-gnome
+echo "Installing vim-gnome dependencies..."
+sudo apt-get build-dep vim-gnome > $temp_file
 
 echo "Enter the password for your ssh key:"
 read pswd </dev/tty || { rc=$?; echo "Unable to read from TTY" >&2; exit "$rc"; }
@@ -22,14 +26,11 @@ cat ~/.ssh/id_rsa.pub
 echo "Re-enter the password for your ssh key:"
 ssh-add </dev/tty
 
-echo "Press [Enter] key to continue..."
-read </dev/tty
-
 echo "Cloning vim repo..."
-git clone git@github.com:btelles/vim.git ~/.vim
+git clone git@github.com:btelles/vim.git ~/.vim > $temp_file
 
 echo "Installing vim submodules..."
-(cd ~/.vim && git submodule init && git submodule update)
+(cd ~/.vim && git submodule init > $temp_file && git submodule update > $temp_file)
 
 ~/.vim/gnome-terminal-colors-solarized/install.sh -s light -p Default
 
@@ -44,7 +45,7 @@ ln -fs ~/.vim/.bash_profile ~/
 ln -fs ~/.vim/.rspec ~/
 ln -fs ~/.vim/.autotest ~/
 
-echo "installing VIM"
+echo "installing VIM..."
 (cd ~/.vim/vim &&
 ./configure \
     --enable-perlinterp=dynamic \
@@ -56,21 +57,21 @@ echo "installing VIM"
     --enable-gnome-check \
     --with-features=huge \
     --with-x \
-    --with-python-config-dir=/usr/lib/python2.7/config &&
-make -j 4 && sudo make install
+    --with-python-config-dir=/usr/lib/python2.7/config > $temp_file &&
+make -j 4 > $temp_file && sudo make install > $temp_file
 )
 
-echo "Copying Consolas font to local directory."
+echo "Copying Consolas font to local directory..."
 mkdir -p ~/.fonts
 cp ~/.vim/Consolas.ttf ~/.fonts
 
 echo "Installing Rbenv..."
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-cd ~/.rbenv && src/configure && make -C src
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv > $temp_file
+cd ~/.rbenv && src/configure > $temp_file && make -C src > $temp_file
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build > $temp_file
 
 echo "Installing PyEnv..."
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv > $temp_file
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash > $temp_file
