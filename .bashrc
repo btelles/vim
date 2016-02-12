@@ -52,7 +52,6 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
-echo $color_prompt
 export GIT_PS1_SHOWCOLORHINTS=1
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
