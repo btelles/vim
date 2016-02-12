@@ -1,18 +1,20 @@
 #!/bin/bash
 
 
-echo "Installing dependencies"
+echo -n "Installing dependencies"
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev git
 
-echo "Generating ssh key..."
-echo "Enter the password for your ssh key:"
+echo -n "Enter the password for your ssh key:"
 read pswd
+
+echo -n "Generating ssh key..."
 ssh-keygen -f ~/.ssh/id_rsa -N $pswd
 
-echo "Add the following ssh key to my github account:"
+echo -n "Add the following ssh key to my github account:"
 cat ~/.ssh/id_rsa.pub
-read -p "Press [Enter] key to continue..."
+echo -n "Press [Enter] key to continue..."
+read
 
 echo "Cloning vim repo..."
 git clone git@github.com:btelles/vim.git ~/.vim
