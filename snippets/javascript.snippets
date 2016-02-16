@@ -108,61 +108,50 @@ snippet wa
 #expect to equal (chai/code)
 snippet ae
 	assert.equal(${1:target}, ${2:value});
-
 #expect to deep equal (chai/code)
 snippet ade
 	assert.deepEqual(${1:target}, ${2:value});
-
+#expect to lengthOf (chai/code)
+snippet al
+	assert.lengthOf(${1:target}, ${2:value});
 #expect to match (chai/code)
 snippet am
 	assert.match(${1:target}, ${2:pattern});
-
 #expect to be true (chai/code)
 snippet at
 	assert.isTrue(${1:target});
-
 #expect to be false (chai/code)
 snippet af
 	assert.isFalse(${1:target});
-
 #expect to be undefined (chai/code)
 snippet au
 	assert.isUndefined(${1:target});
-
 #expect to be defined (chai/code)
 snippet ad
 	assert.isDefined(${1:target});
-
 #expect to be null (chai/code)
 snippet an
 	assert.isNull(${1:target});
-
 #expect to include (chai/code)
 snippet ai
 	assert.include(${1:target}, ${2:value});
-
 #expect not to equal (chai/code)
 snippet note
 	assert.notEqual(${1:target}, ${2:value});
-
 #expect not to match (chai/code)
 snippet notm
 	assert.notMatch(${1:target}, ${2:pattern});
-
 #expect not to be null (chai/code)
 snippet notn
 	assert.isNotNull(${1:target});
-
 #expect not to contain (chai/code)
 snippet notc
 	assert.notInclude(${1:needle}, ${2:haystack});
-
 #test(...)
 snippet test
 	test('${1:description}', (${2:done}) => {
 	  ${3}
 	});
-
 #flush(...)
 snippet flush
 	flush(() => {
