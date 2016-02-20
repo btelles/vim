@@ -1,5 +1,6 @@
 *.swp
 *~
+tags*
 tmp/*
 *.directory
 .netrwhist
