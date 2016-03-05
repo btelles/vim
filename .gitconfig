@@ -38,8 +38,6 @@
 	ui = true
 [core]
   editor = vim
-[branch "master"]
-  mergeoptions = --no-ff
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 700x550+1+53

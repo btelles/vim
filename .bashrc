@@ -145,5 +145,9 @@ export NVM_DIR="/home/bernie/.nvm"
 
 source $HOME/.vim/git-prompt/git-prompt.sh
 
+# The next line updates PATH for the Google Cloud SDK.
+source '/usr/local/google/home/btelles/google-cloud-sdk/path.bash.inc'
 
+# The next line enables shell command completion for gcloud.
+source '/usr/local/google/home/btelles/google-cloud-sdk/completion.bash.inc'
 
