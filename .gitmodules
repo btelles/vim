@@ -88,3 +88,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/vim/vim
+[submodule "bundle/vim-pug"]
+	path = bundle/vim-pug
+	url = https://github.com/digitaltoad/vim-pug
