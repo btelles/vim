@@ -140,14 +140,19 @@ export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/lo
 
 export EDITOR=gvim
 
-export NVM_DIR="/home/bernie/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+if [[ -f "$HOME/.nvm/nvm.sh" ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
 source $HOME/.vim/git-prompt/git-prompt.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google/home/btelles/google-cloud-sdk/path.bash.inc'
+if [[ -f "$HOME/google-cloud-sdk/path.bash.inc" ]]; then
+  source "$HOME/google-cloud-sdk/path.bash.inc"
+fi
 
 # The next line enables shell command completion for gcloud.
-source '/usr/local/google/home/btelles/google-cloud-sdk/completion.bash.inc'
+if [[ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]]; then
+  source "$HOME/google-cloud-sdk/completion.bash.inc"
+fi
 
