@@ -121,7 +121,7 @@ else
 endif
 
 " set guifont=DejaVu\\ Sans\\ Mono\\ Bold\\ 10
-set guifont=Consolas\ 12
+set guifont=Consolas\ 16
 
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces

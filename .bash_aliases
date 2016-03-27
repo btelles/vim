@@ -9,6 +9,8 @@ alias wmsp="cd ~/code/cloud/wms/polymer"
 # google/data
 alias startsffe=/google/data/ro/projects/static-on-bigtable/startsffe
 
+
+alias ack="ack-grep"
 # git
 alias gap='git add -p'
 alias gc='git commit'
