@@ -195,3 +195,31 @@ snippet tf
 	    <${2:custom_element}></$2>
 	  </template>
 	</test-fixture>
+snippet tdi
+	<template is="dom-if" if="${1:ifTrue}">
+	  ${2}
+	</template>
+snippet tdr
+	<template is="dom-repeat" items="${1:iterableItem}">
+	  ${2}
+	</template>
+snippet pe
+	<link rel="import" href="../../bower_components/polymer/polymer.html">
+	<dom-module id="${1:my-element}">
+		<template>
+			<style>
+				:host {
+					display: block;
+				}
+			</style>
+			${3}
+		</template>
+		<script>
+			(function() {
+				'use strict';
+				Polymer({
+					is: '${2:$1}'
+				});
+			})();
+		</script>
+	</dom-module>
