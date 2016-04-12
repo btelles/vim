@@ -15,6 +15,7 @@ alias gc='git commit'
 alias gg='git gui'
 alias gk='gitk --all'
 alias gs='git status'
+alias gr='git co master && git fetch origin && git reset --hard origin/master'
 
 # git5
 alias g5='git5'

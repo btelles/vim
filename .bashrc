@@ -135,12 +135,19 @@ if [[ -n "${PYENV_ROOT}" ]]; then
 	eval "$($PYENV_ROOT/bin/pyenv init -)"
 fi
 
+if [[ -e "/opt/webstorm/bin" ]]; then
+  export PATH="${PATH}:/opt/webstorm/bin"
+fi
+
+if [[ -e "/opt/pycharm/bin" ]]; then
+  export PATH="${PATH}:/opt/pycharm/bin"
+fi
 
 export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/local/node/bin
 
 export EDITOR=gvim
 
-export NVM_DIR="/home/bernie/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 source $HOME/.vim/git-prompt/git-prompt.sh
