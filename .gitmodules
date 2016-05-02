@@ -55,9 +55,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = http://github.com/mattn/emmet-vim.git
-[submodule "bundle/jshint2.vim"]
-	path = bundle/jshint2.vim
-	url = git://github.com/Shutnik/jshint2.vim.git
 [submodule "bundle/utilsnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
