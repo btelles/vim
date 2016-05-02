@@ -23,13 +23,14 @@
 	co = checkout
   f = fetch
   p = pull
-	df = diff
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	cb = rev-parse --abbrev-ref HEAD
+  df = diff
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  cb = rev-parse --abbrev-ref HEAD
   pcb = ! sh -c '(git push origin $(git cb))'
   ls = ls-files
+  sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [color]
 	branch = auto
 	diff = auto
