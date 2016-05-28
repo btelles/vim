@@ -156,3 +156,10 @@ if [[ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]]; then
   source "$HOME/google-cloud-sdk/completion.bash.inc"
 fi
 
+if [[ -e "/opt/neo4j/bin" ]]; then
+  export PATH=$PATH:/opt/neo4j/bin
+fi
+
+if [[ -e "/opt/java/bin" ]]; then
+  export PATH=$PATH:/opt/java/bin
+fi
