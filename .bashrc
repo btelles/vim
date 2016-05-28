@@ -126,8 +126,12 @@ if [[ -e "${HOME}/.pyenv/bin/pyenv" ]]; then
 	PYENV_ROOT=$HOME/.pyenv
 elif [[ -e "/usr/local/pyenv/bin/pyenv" ]]; then
 	PYENV_ROOT=/usr/local/pyenv
+else
+        export PYTHONPATH=/usr/lib/python2.7/dist-packages:/usr/local/lib/python2.7/dist-packages
+        if [[ -e "${HOME}/code/robotics" ]]; then
+                export PYTHONPATH="${PYTHONPATH}:${HOME}/code/robotics"
+        fi
 fi
- 
 export PYENV_ROOT
 export PATH="${PYENV_ROOT}/bin:${PATH}"
 
@@ -135,6 +139,21 @@ if [[ -n "${PYENV_ROOT}" ]]; then
 	eval "$($PYENV_ROOT/bin/pyenv init -)"
 fi
 
+if [[ -e "/opt/webstorm/bin" ]]; then
+  export PATH="${PATH}:/opt/webstorm/bin"
+fi
+
+if [[ -e "/opt/pycharm/bin" ]]; then
+  export PATH="${PATH}:/opt/pycharm/bin"
+fi
+
+if [[ -e "/opt/datagrip/bin" ]]; then
+  export PATH="${PATH}:/opt/datagrip/bin"
+fi
+
+if [[ -e "/opt/clion/bin" ]]; then
+  export PATH="${PATH}:/opt/clion/bin"
+fi
 
 export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/local/node/bin
 

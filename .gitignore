@@ -11,3 +11,6 @@ ruby/command-t/ext.so
 ruby/command-t/match.o
 ruby/command-t/matcher.o
 ruby/command-t/mkmf.log
+.idea/
+doc/
+bundle/*/doc/

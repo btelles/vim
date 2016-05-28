@@ -1,9 +1,202 @@
-snippet f "function(arg) {}"
-function(${1:arguments}) {
-	${VISUAL}$0
-}
+# Prototype
+snippet proto
+	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+		${4:// body...}
+	};${5}
+endsnippet
+# Function
+#snippet fun
+#	function ${1:function_name} (${2:argument}) {
+#		${3:// body...}
+#	}
+# var v = element.querySelector
+snippet veqs
+	var ${1:e} = element.querySelector('${2:$1}');
+endsnippet
+# element.querySelector
+snippet aqs
+	element.querySelector('${1}')
+endsnippet
+# Anonymous Function
+snippet f
+	function(${1}) {${2}};
+endsnippet
+# if
+snippet if
+	if (${1:true}) {
+		${2}
+	}
+endsnippet
+## if ... else
+#snippet ife
+#	if (${1:true}) {${2}}
+#	else{${3}}
+# tertiary conditional
+snippet t
+	${1:/* condition */} ? ${2:a} : ${3:b}
+endsnippet
+# switch
+snippet switch
+	switch(${1:expression}) {
+		case '${3:case}':
+			${4:// code}
+			break;
+		${5}
+		default:
+			${2:// code}
+	}
+endsnippet
+# case
+snippet case
+	case '${1:case}':
+		${2:// code}
+		break;
+	${3}
+endsnippet
+# for (...) {...}
+snippet for
+	for (var ${2:i} = 0; $2 < ${1:Things}.length; $2${3:++}) {
+		${4:$1[$2]}
+	};
+endsnippet
+#for (...) {...} (Improved Native For-Loop)
+snippet forr
+	for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2${3:--}) {
+		${4:$1[$2]}
+	};
+endsnippet
+# while (...) {...}
+snippet wh
+	while (${1:/* condition */}) {
+		${2:/* code */}
+	}
+endsnippet
+# do...while
+snippet do
+	do {
+		${2:/* code */}
+	} while (${1:/* condition */});
+endsnippet
+# New Method
+snippet m
+	${1:method_name}(${2:attribute}) {
+		${4}
+	}${3:,}
+endsnippet
+# Object Method
+snippet :f
+	${1:method_name}: function(${2:attribute}) {
+		${4}
+	}${3:,}
+endsnippet
+# After Each
+snippet aft
+	afterEach(function() { 
+		${1} 
+	}# Any
+endsnippet
+snippet bef
+	beforeEach(function() {
+		${1}
+	});
+endsnippet
+# Spy on and call fake
+snippet scf
+	spyOn(${1:object}, "${2:method}").andCallFake(${3:function});${4}
+endsnippet
+# Spy on and call through
+snippet sct
+	spyOn(${1:object}, "${2:method}").andCallThrough();${3}
+endsnippet
+# Spy on and return
+snippet sr
+	spyOn(${1:object}, "${2:method}").andReturn(${3:arguments});${4}
+endsnippet
+# Spy on and throw
+snippet st
+	spyOn(${1:object}, "${2:method}").andThrow(${3:exception});${4}
+endsnippet
+# Spy on
+snippet s
+	spyOn(${1:object}, "${2:method}");${3}
+endsnippet
+# Waits
+snippet wa
+	waits(${1});${2}
 endsnippet
 
+## Chai Assert API
+
+#expect to equal (chai/code)
+snippet ae
+	assert.equal(${1:target}, ${2:value});
+endsnippet
+#expect to deep equal (chai/code)
+snippet ade
+	assert.deepEqual(${1:target}, ${2:value});
+endsnippet
+#expect to lengthOf (chai/code)
+snippet al
+	assert.lengthOf(${1:target}, ${2:value});
+endsnippet
+#expect to match (chai/code)
+snippet am
+	assert.match(${1:target}, ${2:pattern});
+endsnippet
+#expect to be true (chai/code)
+snippet at
+	assert.isTrue(${1:target});
+endsnippet
+#expect to be false (chai/code)
+snippet af
+	assert.isFalse(${1:target});
+endsnippet
+#expect to be undefined (chai/code)
+snippet au
+	assert.isUndefined(${1:target});
+endsnippet
+#expect to be defined (chai/code)
+snippet ad
+	assert.isDefined(${1:target});
+endsnippet
+#expect to be null (chai/code)
+snippet an
+	assert.isNull(${1:target});
+endsnippet
+#expect to include (chai/code)
+snippet ai
+	assert.include(${1:target}, ${2:value});
+endsnippet
+#expect not to equal (chai/code)
+snippet note
+	assert.notEqual(${1:target}, ${2:value});
+endsnippet
+#expect not to match (chai/code)
+snippet notm
+	assert.notMatch(${1:target}, ${2:pattern});
+endsnippet
+#expect not to be null (chai/code)
+snippet notn
+	assert.isNotNull(${1:target});
+endsnippet
+#expect not to contain (chai/code)
+snippet notc
+	assert.notInclude(${1:needle}, ${2:haystack});
+endsnippet
+#test(...)
+snippet test
+	test('${1:description}', (${2:done}) => {
+		${3}
+	});
+endsnippet
+#flush(...)
+snippet flush
+	flush(() => {
+		${1}
+		done();
+	});
+endsnippet
+#console.log
 snippet cl "console.log('arg', arg)"
 console.log("${1:this}", $1);
 endsnippet
