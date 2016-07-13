@@ -165,6 +165,10 @@ if [[ -f "$HOME/.nvm/nvm.sh" ]]; then
 fi
 source $HOME/.vim/git-prompt/git-prompt.sh
 
+
+# added by travis gem
+[ -f /usr/local/google/home/btelles/.travis/travis.sh ] && source /usr/local/google/home/btelles/.travis/travis.sh
+
 # The next line updates PATH for the Google Cloud SDK.
 if [[ -f "$HOME/google-cloud-sdk/path.bash.inc" ]]; then
   source "$HOME/google-cloud-sdk/path.bash.inc"
