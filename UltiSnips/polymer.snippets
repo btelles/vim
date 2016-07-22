@@ -9,3 +9,14 @@ snippet tdr
 	${4:${VISUAL:pass}}
 </template>
 endsnippet
+snippet ppe
+link(rel="import", href="../bower_components/polymer/polymer.html")
+dom-module(id="${1:element-name}")
+	template
+		style(is='custom-style' include='app-theme').
+script.
+	Polymer({
+		is: '$1',
+		properties: {}
+	});
+endsnippet

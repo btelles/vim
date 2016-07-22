@@ -39,6 +39,7 @@ let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
 
 let g:UltiSnipsExpandTrigger = "<C-Tab>"
+let g:UltiSnipsListSnippets = ""
 let g:UltiSnipsJumpForwardTrigger = "<C-Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-S-Tab>"
 
