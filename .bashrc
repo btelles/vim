@@ -121,6 +121,21 @@ if [[ -n "${RBENV_ROOT}" ]]; then
 	eval "$($RBENV_ROOT/bin/rbenv init -)"
 fi
 
+if [[ -e "/opt/clion/bin" ]]; then
+  export PATH="${PATH}:/opt/clion/bin"
+fi
+
+if [[ -e "/opt/webstorm/bin" ]]; then
+  export PATH="${PATH}:/opt/webstorm/bin"
+fi
+
+if [[ -e "/opt/neo4j/bin" ]]; then
+  export PATH="${PATH}:/opt/neo4j/bin"
+fi
+
+if [[ -e "/opt/pycharm/bin" ]]; then
+  export PATH="${PATH}:/opt/pycharm/bin"
+fi
 
 if [[ -e "${HOME}/.pyenv/bin/pyenv" ]]; then
 	PYENV_ROOT=$HOME/.pyenv
