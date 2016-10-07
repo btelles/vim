@@ -9,14 +9,57 @@ snippet tdr
 	${4:${VISUAL:pass}}
 </template>
 endsnippet
-snippet ppe
-link(rel="import", href="../bower_components/polymer/polymer.html")
-dom-module(id="${1:element-name}")
-	template
-		style(is='custom-style' include='app-theme').
-script.
+snippet ppb
+${1:name}: {
+	type: Boolean,
+${2:  notify: true}${3:,
+  value: ${4:true}}${5:
+}}${6:,
+}${7:}
+endsnippet
+snippet ppn
+${1:name}: {
+	type: Number,
+${2:  notify: true}${3:,}
+${4:  value: ${5:10}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet ppo
+${1:name}: {
+	type: Object,
+${2:  notify: true}${3:,}
+${4:  value: {${5:}}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet pps
+${1:name}: {
+	type: String,
+${2:  notify: true}${3:,}
+${4:  value: '${5:default}'}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet pe
+<link rel="import" href="../polymer/polymer.html"/>
+<dom-module id="${1:vt-element}">
+	<template>
+		<style is="custom-style">
+		</style>
+		${2}
+	</template>
+</dom-module>
+<script>
+	/**
+	 * @demo demo/index.html
+	 * @element $1
+	 */
 	Polymer({
 		is: '$1',
-		properties: {}
+
+		properties: {
+		}
 	});
+</script>
 endsnippet
