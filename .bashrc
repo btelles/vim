@@ -155,6 +155,10 @@ if [[ -e "/opt/clion/bin" ]]; then
   export PATH="${PATH}:/opt/clion/bin"
 fi
 
+if [[ -e "$HOME/go_appengine" ]]; then
+  export PATH="${PATH}:$HOME/go_appengine"
+fi
+
 export PATH=$PATH:$HOME/bin:./node_modules/.bin:$HOME/node_modules/.bin:$HOME/local/node/bin
 
 export EDITOR=gvim
@@ -180,3 +184,8 @@ if [[ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]]; then
 fi
 
 export GOPATH=$HOME/code/
+
+
+# tabtab source for yo package
+# uninstall by removing these lines or running `tabtab uninstall yo`
+[ -f /usr/local/google/home/btelles/.nvm/versions/node/v6.2.0/lib/node_modules/yo/node_modules/tabtab/.completions/yo.bash ] && . /usr/local/google/home/btelles/.nvm/versions/node/v6.2.0/lib/node_modules/yo/node_modules/tabtab/.completions/yo.bash
