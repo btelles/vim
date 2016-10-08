@@ -1,0 +1,76 @@
+priority -50
+extends javascript
+extends json
+# Polymer Element
+snippet pe
+link(rel="import", href="../bower_components/polymer/polymer.html")
+dom-module(id="${1:element-name}")
+	template
+		style(is='custom-style' include='app-theme').
+script.
+	Polymer({
+		is: '$1',
+		properties: {}
+	});
+endsnippet
+# Polymer Behavior
+snippet pb
+html
+	body
+		link(rel='import', href='../../bower_components/polymer/polymer.html')
+		script.
+			window.Behaviors = window.Behaviors || [];
+			/** ${2:Facilitates creating widgets...}
+			*
+			* Usage:
+			*
+			*   Polymer({
+			*     is: 'r-element',
+			*     behaviors: [ window.Behaviors.$1} ]
+			*   });
+			*
+			**/
+			window.Behaviors.${1:VtMyBehavior} = {
+				properties: {}${3}
+			};
+endsnippet
+snippet tdi
+template(is='dom-if', if='${1:[[${2:condition}]]}')
+	${3:${VISUAL:pass}}
+endsnippet
+snippet tdr
+template(is='dom-repeat', items='${1:items}', ${2:as='${3:item}'})
+	${4:${VISUAL:pass}}
+endsnippet
+snippet ppb
+${1:name}: {
+	type: Boolean,
+${2:  notify: true}${3:,
+  value: ${4:true}}${5:
+}}${6:,
+}${7:}
+endsnippet
+snippet ppn
+${1:name}: {
+	type: Number,
+${2:  notify: true}${3:,}
+${4:  value: ${5:10}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet ppo
+${1:name}: {
+	type: Object,
+${2:  notify: true}${3:,}
+${4:  value: {${5:}}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet pps
+${1:name}: {
+	type: String,
+${2:  notify: true}${3:,}
+${4:  value: '${5:default}'}${6:}
+}${7:,}
+${8:}
+endsnippet

@@ -1,0 +1,65 @@
+priority -50
+snippet tdi
+<template is="dom-if" if="${1}">
+	${2:${VISUAL:pass}}
+</template>
+endsnippet
+snippet tdr
+<template is="dom-repeat" items="${1:items}"${2: item="${3:name}"}>
+	${4:${VISUAL:pass}}
+</template>
+endsnippet
+snippet ppb
+${1:name}: {
+	type: Boolean,
+${2:  notify: true}${3:,
+  value: ${4:true}}${5:
+}}${6:,
+}${7:}
+endsnippet
+snippet ppn
+${1:name}: {
+	type: Number,
+${2:  notify: true}${3:,}
+${4:  value: ${5:10}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet ppo
+${1:name}: {
+	type: Object,
+${2:  notify: true}${3:,}
+${4:  value: {${5:}}}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet pps
+${1:name}: {
+	type: String,
+${2:  notify: true}${3:,}
+${4:  value: '${5:default}'}${6:}
+}${7:,}
+${8:}
+endsnippet
+snippet pe
+<link rel="import" href="../polymer/polymer.html"/>
+<dom-module id="${1:vt-element}">
+	<template>
+		<style is="custom-style">
+		</style>
+		${2}
+	</template>
+</dom-module>
+<script>
+	/**
+	 * @demo demo/index.html
+	 * @element $1
+	 */
+	Polymer({
+		is: '$1',
+
+		properties: {
+		}
+	});
+</script>
+endsnippet
