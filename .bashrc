@@ -204,3 +204,6 @@ export GOPATH=$HOME/code/
 # tabtab source for yo package
 # uninstall by removing these lines or running `tabtab uninstall yo`
 [ -f /usr/local/google/home/btelles/.nvm/versions/node/v6.2.0/lib/node_modules/yo/node_modules/tabtab/.completions/yo.bash ] && . /usr/local/google/home/btelles/.nvm/versions/node/v6.2.0/lib/node_modules/yo/node_modules/tabtab/.completions/yo.bash
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
