@@ -115,6 +115,7 @@ set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 
 if has('gui_running')
   " GUI colors
+  set background=dark
   colorscheme solarized
   " colorscheme vividchalk
   " colorscheme twilight257
