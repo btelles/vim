@@ -3,6 +3,7 @@ alias u='cd ..'
 alias which="type -path"
 alias x=startx
 
+alias vtf="cd ~/code/admin-dashboard-frontend"
 alias wms="cd ~/code/robotics/cloud/wms"
 alias wmsp="cd ~/code/robotics/cloud/wms/polymer"
 

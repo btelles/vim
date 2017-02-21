@@ -38,8 +38,12 @@ let g:acp_behaviorSnipmateLength = 1
 let g:acp_behaviorRubyOmniMethodLength = 2
 let g:acp_behaviorRubyOmniSymbolLength = 2
 
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
+let g:UltiSnipsExpandTrigger = "<C-Tab>"
+let g:UltiSnipsListSnippets = ""
+let g:UltiSnipsJumpForwardTrigger = "<C-Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-S-Tab>"
+
+let g:ycm_confirm_extra_conf = 0
 
 function! <SID>StripTrailingWhitespaces()
     let _s=@/
@@ -111,6 +115,7 @@ set timeoutlen=350  " Time to wait after ESC (default causes an annoying delay)
 
 if has('gui_running')
   " GUI colors
+  set background=dark
   colorscheme solarized
   " colorscheme vividchalk
   " colorscheme twilight257
