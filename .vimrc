@@ -329,29 +329,3 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 let g:ctrlp_match_window = 'top,order:ttb,max:20'
 let g:ctrlp_working_path_mode = ''
 
-" Google stuff
-"if filereadable("/usr/share/vim/google/google.vim")
-"  source /usr/share/vim/google/google.vim
-"
-"  " :BlazeDepsUpdate
-"  Glug blazedeps
-"
-"  Glug codefmt-google auto_filetypes+=blazebuild
-"  Glug piper plugin[mappings]
-"  Glug clang-format plugin[mappings]
-"  " nnoremap <leader>ff :AutoFormatBuffer<CR>
-"
-"  Glug findinc
-"  nnoremap gf :FindIncRelatedFiles<CR>
-"
-"  Glug relatedfiles plugin[mappings]
-"  Glug g4
-"  Glug ultisnips-google
-"
-"  Glug blaze plugin[mappings]='<leader>b'
-"  let g:blazevim_notify_after_blaze = 1
-"
-"  Glug corpweb
-"  noremap <unique> <leader>cs :CorpWebCs<Space>
-"  noremap <unique> <leader>cf :CorpWebCsFile<CR>
-"endif
