@@ -68,10 +68,10 @@ echo "Copying Consolas font to local directory..."
 mkdir -p ~/.fonts
 cp ~/.vim/Consolas.ttf ~/.fonts
 
-echo "Installing Rbenv..."
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-cd ~/.rbenv && src/configure > ${temp_file} && make -C src
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+#echo "Installing Rbenv..."
+#git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+#cd ~/.rbenv && src/configure > ${temp_file} && make -C src
+#git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 echo "Installing PyEnv..."
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
